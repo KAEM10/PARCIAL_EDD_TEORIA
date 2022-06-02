@@ -1,0 +1,6 @@
+C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\bin\Debug\libColecciones.dll
+C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\bin\Debug\libColecciones.pdb
+C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csprojAssemblyReference.cache
+C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.CoreCompileInputs.cache
+C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
+C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb

@@ -1,0 +1,2 @@
+C:\Users\maye\source\repos\libColecciones-Teoria\uTestPilaVector\obj\Debug\uTestPilaVector.csprojAssemblyReference.cache
+C:\Users\maye\source\repos\libColecciones-Teoria\uTestPilaVector\obj\Debug\uTestPilaVector.csproj.CoreCompileInputs.cache
