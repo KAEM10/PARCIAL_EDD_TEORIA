@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e1c63a13-2858-43a2-88d9-905e0338818e": {
+      "ProjectGuid": "e1c63a13-2858-43a2-88d9-905e0338818e",
+      "DisplayName": "uTestPilaVector",
+      "ColorIndex": 0
+    },
+    "c0e6abd9-c42d-4f7e-90e3-56f37f3c2aa0": {
+      "ProjectGuid": "c0e6abd9-c42d-4f7e-90e3-56f37f3c2aa0",
+      "DisplayName": "libColecciones-Teoria",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

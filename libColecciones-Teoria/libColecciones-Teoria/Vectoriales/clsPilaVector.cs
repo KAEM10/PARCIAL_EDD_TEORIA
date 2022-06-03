@@ -367,7 +367,36 @@ namespace Servicios.Colecciones.Vectoriales
         }
         public bool reversar()
         {
-            return atrReversar;
+            
+            if (atrCapacidad > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else 
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for(int i = atrLongitud-1; i >= end; i--)
+                {
+
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                atrReversar = true;
+
+                return atrReversar;
+            }
+            else
+            {
+                return atrReversar;
+            }
         }
         #endregion
         #region Mutadores

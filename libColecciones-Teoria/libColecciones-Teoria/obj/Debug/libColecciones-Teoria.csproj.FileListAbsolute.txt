@@ -4,3 +4,9 @@ C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug
 C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.CoreCompileInputs.cache
 C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
 C:\Users\maye\source\repos\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb
+D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\bin\Debug\libColecciones.dll
+D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\bin\Debug\libColecciones.pdb
+D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.AssemblyReference.cache
+D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.CoreCompileInputs.cache
+D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
+D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb
