@@ -367,7 +367,6 @@ namespace Servicios.Colecciones.Vectoriales
         }
         public bool reversar()
         {
-            
             if (atrCapacidad > 0)
             {
                 Tipo aux;

@@ -18,25 +18,22 @@ namespace Servicios.Colecciones.Enlazadas
         {
             throw new NotImplementedException();
         }
-
-        public bool insertar(int prmIndice, Tipo prmItem)
+        public bool insertarEn(int prmIndice, Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-
-        public bool remover(int prmIndice, ref Tipo prmItem)
+        public bool extraerEn(int prmIndice, ref Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-
-        public bool modificar(int prmindice, Tipo prmItem)
+        public bool modificarEn(int prmindice, Tipo prmItem)
         {
             throw new NotImplementedException();
         }
         #endregion
         #region QUERY
 
-        public bool encontrar(Tipo prmItem, ref int prmIndice)
+        public bool encontrarA(Tipo prmItem, ref int prmIndice)
         {
             throw new NotImplementedException();
         }

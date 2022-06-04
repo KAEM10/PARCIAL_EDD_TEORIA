@@ -10,3 +10,8 @@ D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Deb
 D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.CoreCompileInputs.cache
 D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
 D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb
+C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\bin\Debug\libColecciones.dll
+C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\bin\Debug\libColecciones.pdb
+C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.CoreCompileInputs.cache
+C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
+C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb

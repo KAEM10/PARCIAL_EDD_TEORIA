@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uTestColaVector.cs" />
     <Compile Include="uTestPilaVector.cs" />
   </ItemGroup>
   <ItemGroup>
