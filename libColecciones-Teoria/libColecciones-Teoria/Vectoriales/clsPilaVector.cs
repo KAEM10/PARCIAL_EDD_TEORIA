@@ -351,7 +351,7 @@ namespace Servicios.Colecciones.Vectoriales
                     atrItems[i + 1] = atrItems[i];
                     atrItems[i] = prmItem;
                 }
-                //atrItems[0] = prmItem;
+                atrItems[0] = prmItem;
                 atrLongitud++;
                 espacio = true;
             }
