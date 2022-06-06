@@ -331,31 +331,30 @@ namespace Servicios.Colecciones.Vectoriales
         #region CRUDs
         public bool apilar(Tipo prmItem)
         {
-            bool espacio = false;
-            /*if(atrCapacidad != atrLongitud)
+            
+            bool apilo = false;
+            
+            if (atrLongitud < atrCapacidad)
             {
-                atrLongitud = 0;
-                atrItems[atrLongitud] = prmItem;
-                atrLongitud++;
-                espacio = true;
-            }else if (atrCapacidad == atrLongitud)
-            {
-                espacio = false;
-            }*/
-            if (atrCapacidad >= atrLongitud)
-            {
-                atrCapacidad = atrFactorCrecimiento;
-                atrItems = new Tipo[atrCapacidad];
-                for (int i = atrLongitud; i < atrItems.Length - 1; i++)
+                for (int i = atrLongitud; i > 0; i--)
                 {
-                    atrItems[i + 1] = atrItems[i];
-                    atrItems[i] = prmItem;
+                    atrItems[i] = atrItems[i - 1];
+                    
                 }
                 atrItems[0] = prmItem;
                 atrLongitud++;
-                espacio = true;
+                apilo = true;
+            }else if (atrDinamica)
+            {
+                Tipo[] backupItems = new Tipo[atrCapacidad];
+                backupItems = atrItems;
+                atrCapacidad = atrCapacidad + atrFactorCrecimiento;
+                
+                atrItems = new Tipo[atrCapacidad];
+                this.ponerItems(backupItems);
+                apilar(prmItem);
             }
-            return espacio;
+            return apilo;
         }
         public bool desapilar(ref Tipo prmItem)
         {
@@ -367,7 +366,7 @@ namespace Servicios.Colecciones.Vectoriales
         }
         public bool reversar()
         {
-            if (atrCapacidad > 0)
+            if (atrLongitud > 0)
             {
                 Tipo aux;
                 int j = 0;
