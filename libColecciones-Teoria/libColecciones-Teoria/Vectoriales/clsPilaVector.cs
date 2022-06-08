@@ -334,22 +334,16 @@ namespace Servicios.Colecciones.Vectoriales
             bool apilo = false;
             if (atrCapacidad == 0)
             {
-                atrCapacidad = atrFactorCrecimiento + atrLongitud;
+                atrCapacidad = atrFactorCrecimiento;
                 atrItems = new Tipo[atrCapacidad];
             }
-            if (atrCapacidad != int.MaxValue / 16 && atrCapacidad == atrLongitud)
+            if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrDinamica)
             {
-                //hacer una pila auxliar
-                /*atrCapacidad = int.MaxValue / 16;
-                atrFactorCrecimiento = 0;
-                atrDinamica = false;
-                atrItems = new Tipo[atrCapacidad];
-                apilo = false;*/
-                Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrLongitud];
+                Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrCapacidad];
                 Array.Copy(atrItems, atrItemsAux, atrItems.Length);
                 atrItems = atrItemsAux;
-                apilo = true;
-                atrCapacidad = atrFactorCrecimiento + atrLongitud;
+                
+                atrCapacidad = atrFactorCrecimiento + atrCapacidad;
             }
             if (atrLongitud < atrCapacidad)
             {
@@ -357,25 +351,21 @@ namespace Servicios.Colecciones.Vectoriales
                 {
                     atrItems[i] = atrItems[i - 1];
                 }
+                atrItems[0] = prmItem;
+                atrLongitud++;
+                apilo = true;
             }
-            atrItems[0] = prmItem;
-            atrLongitud++;
-            apilo = true;
-            /*else if (atrDinamica)
-            {
-                Tipo[] backupItems = new Tipo[atrCapacidad];
-                backupItems = atrItems;
-                atrCapacidad = atrCapacidad + atrFactorCrecimiento;
-                
-                atrItems = new Tipo[atrCapacidad];
-                this.ponerItems(backupItems);
-                apilar(prmItem);
-            }*/
             return apilo;
         }
         public bool desapilar(ref Tipo prmItem)
         {
-            throw new System.NotImplementedException();
+            bool desapilo = false;
+            
+            for (int i = 0; i < atrLongitud; i++)
+            {
+                atrItems[i] = atrItems[i - 1];
+            }
+            return desapilo;
         }
         public bool revisar(ref Tipo prmItem)
         {
