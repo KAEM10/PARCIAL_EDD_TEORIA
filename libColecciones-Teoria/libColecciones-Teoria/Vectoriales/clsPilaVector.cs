@@ -331,20 +331,37 @@ namespace Servicios.Colecciones.Vectoriales
         #region CRUDs
         public bool apilar(Tipo prmItem)
         {
-            
             bool apilo = false;
-            
+            if (atrCapacidad == 0)
+            {
+                atrCapacidad = atrFactorCrecimiento + atrLongitud;
+                atrItems = new Tipo[atrCapacidad];
+            }
+            if (atrCapacidad != int.MaxValue / 16 && atrCapacidad == atrLongitud)
+            {
+                //hacer una pila auxliar
+                /*atrCapacidad = int.MaxValue / 16;
+                atrFactorCrecimiento = 0;
+                atrDinamica = false;
+                atrItems = new Tipo[atrCapacidad];
+                apilo = false;*/
+                Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrLongitud];
+                Array.Copy(atrItems, atrItemsAux, atrItems.Length);
+                atrItems = atrItemsAux;
+                apilo = true;
+                atrCapacidad = atrFactorCrecimiento + atrLongitud;
+            }
             if (atrLongitud < atrCapacidad)
             {
-                for (int i = atrLongitud; i > 0; i--)
+                for (int i = atrLongitud + 1; i > 0; i--)
                 {
                     atrItems[i] = atrItems[i - 1];
-                    
                 }
-                atrItems[0] = prmItem;
-                atrLongitud++;
-                apilo = true;
-            }else if (atrDinamica)
+            }
+            atrItems[0] = prmItem;
+            atrLongitud++;
+            apilo = true;
+            /*else if (atrDinamica)
             {
                 Tipo[] backupItems = new Tipo[atrCapacidad];
                 backupItems = atrItems;
@@ -353,7 +370,7 @@ namespace Servicios.Colecciones.Vectoriales
                 atrItems = new Tipo[atrCapacidad];
                 this.ponerItems(backupItems);
                 apilar(prmItem);
-            }
+            }*/
             return apilo;
         }
         public bool desapilar(ref Tipo prmItem)
