@@ -393,19 +393,57 @@ namespace Servicios.Colecciones.Vectoriales
         #region CRUD
         public bool desencolar(ref Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool desencola = false;
+            if(atrLongitud > 0)
+            {
+                prmItem = atrItems[0];
+                for (int i = 0; i < (atrLongitud - 1); i++)
+                {
+                    atrItems[i] = atrItems[i + 1];
+                }
+                desencola = true;
+                atrLongitud--;
+            }
+
+            return desencola;
         }
         public bool encolar(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool encola = false;
+            if (atrCapacidad == 0)
+            {
+                atrCapacidad = atrFactorCrecimiento;
+                atrItems = new Tipo[atrCapacidad];
+            }
+            if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrDinamica)
+            {
+                Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrCapacidad];
+                Array.Copy(atrItems, atrItemsAux, atrItems.Length);
+                atrItems = atrItemsAux;
+
+                atrCapacidad = atrFactorCrecimiento + atrCapacidad;
+            }
+            if (atrLongitud < atrCapacidad)
+            {
+                atrItems[atrLongitud] = prmItem;
+                atrLongitud++;
+                encola = true;
+            }
+            return encola;
         }
         public bool revisar(ref Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool reviso = false;
+            if (atrLongitud > 0)
+            {
+                prmItem = atrItems[0];
+                reviso = true;
+            }
+            return reviso;
         }
         public bool reversar()
         {
-            if (atrCapacidad > 0)
+            if (atrLongitud > 0)
             {
                 Tipo aux;
                 int j = 0;
