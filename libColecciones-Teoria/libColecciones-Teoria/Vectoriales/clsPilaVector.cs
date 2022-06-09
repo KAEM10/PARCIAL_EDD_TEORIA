@@ -360,16 +360,28 @@ namespace Servicios.Colecciones.Vectoriales
         public bool desapilar(ref Tipo prmItem)
         {
             bool desapilo = false;
-            
-            for (int i = 0; i < atrLongitud; i++)
+            if (atrLongitud > 0)
             {
-                atrItems[i] = atrItems[i - 1];
+                prmItem = atrItems[0];
+                for (int i = 0; i < (atrLongitud - 1); i++)
+                {
+                    atrItems[i] = atrItems[i + 1];
+                }
+                desapilo = true;
+                atrLongitud--;
             }
+            
             return desapilo;
         }
         public bool revisar(ref Tipo prmItem)
         {
-            throw new System.NotImplementedException();
+            bool reviso = false;
+            if (atrLongitud > 0)
+            {
+                prmItem = atrItems[0];
+                reviso = true;
+            }
+            return reviso;
         }
         public bool reversar()
         {
