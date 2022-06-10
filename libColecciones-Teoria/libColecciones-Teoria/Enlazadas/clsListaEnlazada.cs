@@ -18,12 +18,12 @@ namespace Servicios.Colecciones.Enlazadas
             throw new NotImplementedException();
         }
 
-        public bool contieneA(int prmindice)
+        public bool contieneA(Tipo prmItem)
         {
             throw new NotImplementedException();
         }
 
-        public bool encontrarA(int prmIndice)
+        public int encontrarA(Tipo prmItem)
         {
             throw new NotImplementedException();
         }

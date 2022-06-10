@@ -393,15 +393,68 @@ namespace Servicios.Colecciones.Vectoriales
         #region CRUD
         public bool agregar(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool agrego = false;
+            if (atrCapacidad == 0)
+            {
+                atrCapacidad = atrFactorCrecimiento;
+                atrItems = new Tipo[atrCapacidad];
+            }
+            if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrDinamica)
+            {
+                Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrCapacidad];
+                Array.Copy(atrItems, atrItemsAux, atrItems.Length);
+                atrItems = atrItemsAux;
+
+                atrCapacidad = atrFactorCrecimiento + atrCapacidad;
+            }
+            if (atrLongitud < atrCapacidad)
+            {
+                atrItems[atrLongitud] = prmItem;
+                atrLongitud++;
+                agrego = true;
+            }
+            return agrego;
         }
         public bool insertarEn(int prmIndice, Tipo prmItem)
         {
-            throw new NotImplementedException();
+            Tipo aux;
+            bool insertar = false;
+            if ((prmIndice >= 0) && (prmIndice < atrCapacidad))
+            {
+                if ((atrLongitud > 0))
+                {
+                    for (int i = prmIndice; i < (atrLongitud - 1); i++)
+                    {
+                        aux = atrItems[i];
+                        atrItems[i] = prmItem;
+                    }
+                    insertar = true;
+                    atrLongitud--;
+                }
+            }
+
+            return insertar;
         }
         public bool extraerEn(int prmIndice, ref Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool extraer = false;
+
+            if((prmIndice >= 0) && (prmIndice < atrLongitud))
+            {
+                if ((atrLongitud > 0) && (atrItems[prmIndice] != null))
+                {
+                    prmItem = atrItems[prmIndice];
+                    for (int i = prmIndice; i < (atrLongitud - 1); i++)
+                    {
+                        atrItems[i] = atrItems[i + 1];
+                    }
+                    extraer = true;
+                    atrLongitud--;
+                }
+                
+            }
+
+            return extraer;
         }
         public bool modificarEn(int prmindice, Tipo prmItem)
         {
@@ -445,13 +498,40 @@ namespace Servicios.Colecciones.Vectoriales
         }
         #endregion
         #region QUERY
-        public bool encontrarA(int prmIndice)
+        public int encontrarA(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            int atrIndice = -1;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        atrIndice = i;
+                        break;
+                    }
+                }
+            }
+
+            return atrIndice;
         }
-        public bool contieneA(int prmindice)
+        public bool contieneA(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool contiene = false;
+
+            if (atrLongitud > 0)
+            {
+                for(int i = 0; i < atrLongitud; i++)
+                {
+                    if(atrItems[i].Equals(prmItem))
+                    {
+                        contiene = true;
+                        break;
+                    }
+                }
+            }
+
+            return contiene;
         }
         #endregion
         #endregion

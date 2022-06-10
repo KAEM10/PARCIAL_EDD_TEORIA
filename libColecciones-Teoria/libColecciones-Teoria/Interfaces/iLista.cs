@@ -24,9 +24,9 @@ namespace Servicios.Colecciones.Interfaces
 
         #endregion
         #region QUERY
-        bool encontrarA(int prmIndice);
+        int encontrarA(Tipo prmItem);
 
-        bool contieneA(int prmindice);
+        bool contieneA(Tipo prmItem);
         #endregion
         #endregion
     }
