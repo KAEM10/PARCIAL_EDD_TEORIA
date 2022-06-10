@@ -8,6 +8,7 @@ namespace Servicios.Colecciones.Interfaces
         bool apilar(Tipo prmItem);
         bool desapilar(ref Tipo prmItem);
         bool revisar(ref Tipo prmItem);
+        bool reversar();
         #endregion
     }
 }

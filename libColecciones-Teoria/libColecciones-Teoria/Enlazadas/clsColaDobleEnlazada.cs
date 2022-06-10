@@ -26,6 +26,10 @@ namespace Servicios.Colecciones.Enlazadas
         {
             throw new NotImplementedException();
         }
+        public bool reversar()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
         #endregion
     }

@@ -50,8 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="uTestColaVector.cs" />
-    <Compile Include="uTestPilaVector.cs" />
+    <Compile Include="Colecciones\Pruebas\uTestColaVector.cs" />
+    <Compile Include="Colecciones\Pruebas\uTestListaVector.cs" />
+    <Compile Include="Colecciones\Pruebas\uTestPilaVector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -12,30 +12,45 @@ namespace Servicios.Colecciones.Enlazadas
         #endregion
         #endregion
         #region Metodos
-        #region CRUD
         public bool agregar(Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-        public bool insertarEn(int prmIndice, Tipo prmItem)
+
+        public bool contieneA(int prmindice)
         {
             throw new NotImplementedException();
         }
+
+        public bool encontrarA(int prmIndice)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool extraerEn(int prmIndice, ref Tipo prmItem)
         {
             throw new NotImplementedException();
         }
+
+        public bool insertarEn(int prmIndice, Tipo prmItem)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool modificarEn(int prmindice, Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-        #endregion
-        #region QUERY
-        public bool encontrarA(Tipo prmItem, ref int prmIndice)
+
+        public bool recuperarEn(int prmindice, ref Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-        #endregion
+
+        public bool reversar()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }

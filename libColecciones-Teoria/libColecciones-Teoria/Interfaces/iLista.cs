@@ -18,9 +18,15 @@ namespace Servicios.Colecciones.Interfaces
 
         bool modificarEn(int prmindice, Tipo prmItem);
 
+        bool recuperarEn(int prmindice, ref Tipo prmItem);
+
+        bool reversar();
+
         #endregion
         #region QUERY
-        bool encontrarA(Tipo prmItem, ref int prmIndice);
+        bool encontrarA(int prmIndice);
+
+        bool contieneA(int prmindice);
         #endregion
         #endregion
     }
