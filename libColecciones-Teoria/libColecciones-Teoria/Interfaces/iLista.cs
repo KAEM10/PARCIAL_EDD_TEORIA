@@ -16,9 +16,9 @@ namespace Servicios.Colecciones.Interfaces
 
         bool extraer(int prmIndice, ref Tipo prmItem);
 
-        bool modificar(int prmindice, Tipo prmItem);
+        bool modificar(int prmIndice, Tipo prmItem);
 
-        bool recuperar(int prmindice, ref Tipo prmItem);
+        bool recuperar(int prmIndice, ref Tipo prmItem);
 
         bool reversar();
 

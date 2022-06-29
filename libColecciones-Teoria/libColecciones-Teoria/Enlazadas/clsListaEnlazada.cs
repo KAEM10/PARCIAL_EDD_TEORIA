@@ -192,11 +192,11 @@ namespace Servicios.Colecciones.Enlazadas
 
             return extraer;
         }
-        public bool modificar(int prmindice, Tipo prmItem)
+        public bool modificar(int prmIndice, Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-        public bool recuperar(int prmindice, ref Tipo prmItem)
+        public bool recuperar(int prmIndice, ref Tipo prmItem)
         {
             throw new NotImplementedException();
         }

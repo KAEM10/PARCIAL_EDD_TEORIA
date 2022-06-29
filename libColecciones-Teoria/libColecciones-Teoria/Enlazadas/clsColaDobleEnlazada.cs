@@ -62,6 +62,7 @@ namespace Servicios.Colecciones.Enlazadas
                 atrFactorCrecimiento = 1000;
                 atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
+                atrItems = default(Tipo[]);
             }
         }
         #endregion
@@ -83,7 +84,15 @@ namespace Servicios.Colecciones.Enlazadas
                 atrLongitud = 0;
                 atrTest = false;
                 atrItems = new Tipo[0];
+                atrCapacidad = atrItems.Length;
+                atrLongitud = atrItems.Length;
+                atrItems = default (Tipo[]);
+                return atrTest;
             }
+            else if(prmItems.Length == 0)
+            {
+                atrTest = false;
+            } 
             atrCapacidad = atrItems.Length;
             atrLongitud = atrItems.Length;
             return atrTest;
@@ -141,6 +150,10 @@ namespace Servicios.Colecciones.Enlazadas
                 desencola = true;
                 atrLongitud--;
             }
+            else
+            {
+                prmItem = default(Tipo);
+            }
 
             return desencola;
         }
@@ -175,7 +188,12 @@ namespace Servicios.Colecciones.Enlazadas
             {
                 prmItem = atrItems[0];
                 reviso = true;
+            }   
+            else
+            {
+                prmItem = default(Tipo);
             }
+
             return reviso;
         }
         public bool reversar()
