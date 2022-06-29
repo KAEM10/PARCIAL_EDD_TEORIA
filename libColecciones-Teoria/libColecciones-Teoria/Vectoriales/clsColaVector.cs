@@ -30,7 +30,7 @@ namespace Servicios.Colecciones.Vectoriales
         {
             return atrLongitud;
         }
-        public bool esDinamica()// metodo para saber si es flexible
+        public bool esFlexible()// metodo para saber si es flexible
         {
             return atrDinamica;
         }

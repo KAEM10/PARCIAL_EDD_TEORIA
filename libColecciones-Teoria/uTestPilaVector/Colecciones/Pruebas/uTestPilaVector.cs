@@ -960,7 +960,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testPila.desapilar(ref testItem));
-            Assert.AreEqual(-1, testItem);
+            Assert.AreEqual(0, testItem);
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darCapacidad());
             Assert.AreEqual(1000, testPila.darFactorCrecimiento());
@@ -976,7 +976,7 @@ namespace Colecciones.Servicios.Pruebas
             testPila.apilar(123);
             testPila.apilar(456);
             testPila.apilar(789);
-            testItem = 0;
+            testItem = -1;
             #endregion
             #region Probar y Comprobar
             Assert.IsTrue(testPila.desapilar(ref testItem));
@@ -998,7 +998,7 @@ namespace Colecciones.Servicios.Pruebas
             testItems[1] = 456;
             testItems[2] = 789;
             testPila.ponerItems(testItems);
-            testItem = 0;
+            testItem=-1;
             #endregion
             #region Probar y Comprobar
             Assert.IsTrue(testPila.desapilar(ref testItem));
@@ -1022,7 +1022,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testPila.revisar(ref testItem));
-            Assert.AreEqual(-1, testItem);
+            Assert.AreEqual(0, testItem);
             Assert.AreEqual(0, testPila.darLongitud());
             Assert.AreEqual(0, testPila.darCapacidad());
             Assert.AreEqual(0, testPila.darItems().Length);
@@ -1064,7 +1064,7 @@ namespace Colecciones.Servicios.Pruebas
             testItems[1] = 456;
             testItems[2] = 789;
             testPila.ponerItems(testItems);
-            testItem = 0;
+            testItem=-1;
             #endregion
             #region Probar y Comprobar
             Assert.IsTrue(testPila.revisar(ref testItem));

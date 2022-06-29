@@ -12,21 +12,21 @@ namespace Servicios.Colecciones.Interfaces
         #region CRUD
         bool agregar(Tipo prmItem);
 
-        bool insertarEn(int prmIndice, Tipo prmItem);
+        bool insertar(int prmIndice, Tipo prmItem);
 
-        bool extraerEn(int prmIndice, ref Tipo prmItem);
+        bool extraer(int prmIndice, ref Tipo prmItem);
 
-        bool modificarEn(int prmindice, Tipo prmItem);
+        bool modificar(int prmindice, Tipo prmItem);
 
-        bool recuperarEn(int prmindice, ref Tipo prmItem);
+        bool recuperar(int prmindice, ref Tipo prmItem);
 
         bool reversar();
 
         #endregion
         #region QUERY
-        int encontrarA(Tipo prmItem);
+        int encontrar(Tipo prmItem);
 
-        bool contieneA(Tipo prmItem);
+        bool contiene(Tipo prmItem);
         #endregion
         #endregion
     }

@@ -30,7 +30,7 @@ namespace Servicios.Colecciones.Vectoriales
         {
             return atrLongitud;
         }
-        public bool esDinamica()// metodo para saber si es flexible
+        public bool esFlexible()// metodo para saber si es flexible
         {
             return atrDinamica;
         }
@@ -415,7 +415,7 @@ namespace Servicios.Colecciones.Vectoriales
             }
             return agrego;
         }
-        public bool insertarEn(int prmIndice, Tipo prmItem)
+        public bool insertar(int prmIndice, Tipo prmItem)
         {
             Tipo aux;
             bool insertar = false;
@@ -435,7 +435,7 @@ namespace Servicios.Colecciones.Vectoriales
 
             return insertar;
         }
-        public bool extraerEn(int prmIndice, ref Tipo prmItem)
+        public bool extraer(int prmIndice, ref Tipo prmItem)
         {
             bool extraer = false;
 
@@ -456,11 +456,11 @@ namespace Servicios.Colecciones.Vectoriales
 
             return extraer;
         }
-        public bool modificarEn(int prmindice, Tipo prmItem)
+        public bool modificar(int prmindice, Tipo prmItem)
         {
             throw new NotImplementedException();
         }
-        public bool recuperarEn(int prmindice,ref Tipo prmItem)
+        public bool recuperar(int prmindice,ref Tipo prmItem)
         {
             throw new NotImplementedException();
         }
@@ -498,7 +498,7 @@ namespace Servicios.Colecciones.Vectoriales
         }
         #endregion
         #region QUERY
-        public int encontrarA(Tipo prmItem)
+        public int encontrar(Tipo prmItem)
         {
             int atrIndice = -1;
             if (atrLongitud > 0)
@@ -515,7 +515,7 @@ namespace Servicios.Colecciones.Vectoriales
 
             return atrIndice;
         }
-        public bool contieneA(Tipo prmItem)
+        public bool contiene(Tipo prmItem)
         {
             bool contiene = false;
 

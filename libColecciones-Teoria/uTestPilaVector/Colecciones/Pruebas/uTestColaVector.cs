@@ -26,7 +26,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -43,7 +43,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -58,7 +58,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -73,7 +73,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darItems().Length);
             Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -88,7 +88,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(int.MaxValue/16, testCola.darItems().Length);
             Assert.AreEqual(int.MaxValue/16, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -103,7 +103,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -118,7 +118,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -135,7 +135,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -150,7 +150,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -165,7 +165,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -180,7 +180,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -195,7 +195,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darItems().Length);
             Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -210,7 +210,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darItems().Length);
             Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -225,7 +225,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -240,7 +240,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -255,7 +255,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -270,7 +270,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -287,7 +287,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -302,7 +302,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -317,7 +317,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -332,7 +332,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -348,7 +348,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -363,7 +363,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -378,7 +378,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(500, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -393,7 +393,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -409,7 +409,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -424,7 +424,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darItems().Length);
             Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -439,7 +439,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darItems().Length);
             Assert.AreEqual(500, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(500, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -454,7 +454,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(00, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -470,7 +470,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -485,7 +485,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
             Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -500,7 +500,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -515,7 +515,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -531,7 +531,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -546,7 +546,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -561,7 +561,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -576,7 +576,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -592,7 +592,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -607,7 +607,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -622,7 +622,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -637,7 +637,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
             Assert.AreEqual(0, testCola.darCapacidad());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -656,7 +656,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darCapacidad());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -689,7 +689,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(int.MaxValue/16, testCola.darCapacidad());
             Assert.AreEqual(int.MaxValue / 16, testCola.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             for (int varIterador = 0; varIterador < int.MaxValue / 16; varIterador++)
                 Assert.AreEqual(0, testCola.darItems()[varIterador]);
@@ -718,7 +718,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testCola.ajustarFlexibilidad(true));
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testCola.darCapacidad());
@@ -733,7 +733,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testCola.ajustarFlexibilidad(false));
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darCapacidad());
@@ -748,7 +748,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testCola.ajustarFlexibilidad(false));
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darCapacidad());
@@ -764,7 +764,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testCola.ajustarFactorCrecimiento(3000));
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(3000, testCola.darFactorCrecimiento());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darCapacidad());
@@ -779,7 +779,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testCola.ajustarFactorCrecimiento((int.MaxValue/16)-testCola.darItems().Length));
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(int.MaxValue/16-testCola.darItems().Length, testCola.darFactorCrecimiento());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(500, testCola.darCapacidad());
@@ -794,7 +794,7 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testCola.ajustarFactorCrecimiento(int.MaxValue / 16));
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(int.MaxValue/16, testCola.darCapacidad());
@@ -856,13 +856,13 @@ namespace Colecciones.Servicios.Pruebas
         #endregion
         #region Consultores
         [TestMethod]
-        public void uTestEsDinamica()
+        public void uTestesFlexible()
             {
             #region Configurar
             testCola = new clsColaVector<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             #endregion
             }
         #endregion
@@ -880,7 +880,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(1, testCola.darLongitud());
             Assert.AreEqual(1000, testCola.darCapacidad());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             #endregion
             }
         [TestMethod]
@@ -901,7 +901,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(456, testCola.darItems()[1]);
             Assert.AreEqual(123, testCola.darItems()[0]);
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             #endregion
             }
         [TestMethod]
@@ -939,7 +939,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(false, testCola.encolar(777));
             Assert.AreEqual(int.MaxValue/16, testCola.darCapacidad());
             Assert.AreEqual(int.MaxValue/16, testCola.darLongitud());
-            Assert.AreEqual(false, testCola.esDinamica());
+            Assert.AreEqual(false, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darFactorCrecimiento());
             Assert.AreEqual(int.MaxValue / 16, testCola.darItems().Length);
             CollectionAssert.AreEqual(testItems, testCola.darItems());
@@ -956,11 +956,11 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testCola.desencolar(ref testItem));
-            Assert.AreEqual(-1, testItem);
+            Assert.AreEqual(0, testItem);
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darCapacidad());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(0, testCola.darItems().Length);
             #endregion
             }
@@ -972,7 +972,7 @@ namespace Colecciones.Servicios.Pruebas
             testCola.encolar(123);
             testCola.encolar(456);
             testCola.encolar(789);
-            testItem = 0;
+            testItem=-1;
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testCola.desencolar(ref testItem));
@@ -994,7 +994,7 @@ namespace Colecciones.Servicios.Pruebas
             testItems[1] = 456; 
             testItems[2] = 789;
             testCola.ponerItems(testItems);
-            testItem = 0;
+            testItem=-1;
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testCola.desencolar(ref testItem));
@@ -1018,11 +1018,11 @@ namespace Colecciones.Servicios.Pruebas
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testCola.revisar(ref testItem));
-            Assert.AreEqual(-1, testItem);
+            Assert.AreEqual(0, testItem);
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(0, testCola.darCapacidad());
             Assert.AreEqual(0, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testCola.darItems());
             #endregion
@@ -1046,7 +1046,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(123, testCola.darItems()[0]);
             Assert.AreEqual(456, testCola.darItems()[1]);
             Assert.AreEqual(789, testCola.darItems()[2]);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             #endregion
             }
@@ -1060,7 +1060,7 @@ namespace Colecciones.Servicios.Pruebas
             testItems[1] = 456;
             testItems[2] = 789;
             testCola.ponerItems(testItems);
-            testItem = 0;
+            testItem=-1;
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testCola.revisar(ref testItem));
@@ -1068,7 +1068,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(3, testCola.darLongitud());
             Assert.AreEqual(3, testCola.darCapacidad());
             Assert.AreEqual(3, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             Assert.AreEqual(123, testCola.darItems()[0]);
             Assert.AreEqual(456, testCola.darItems()[1]);
@@ -1093,7 +1093,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(4, testCola.darLongitud());
             Assert.AreEqual(5, testCola.darCapacidad());
             Assert.AreEqual(5, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testCola.darItems());
             #endregion
@@ -1112,7 +1112,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(4, testCola.darLongitud());
             Assert.AreEqual(4, testCola.darCapacidad());
             Assert.AreEqual(4, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             Assert.AreEqual(1000, testCola.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testCola.darItems());
             #endregion
@@ -1129,7 +1129,7 @@ namespace Colecciones.Servicios.Pruebas
             Assert.AreEqual(0, testCola.darLongitud());
             Assert.AreEqual(4, testCola.darCapacidad());
             Assert.AreEqual(4, testCola.darItems().Length);
-            Assert.AreEqual(true, testCola.esDinamica());
+            Assert.AreEqual(true, testCola.esFlexible());
             CollectionAssert.AreEqual(testItems, testCola.darItems());
             #endregion
             }

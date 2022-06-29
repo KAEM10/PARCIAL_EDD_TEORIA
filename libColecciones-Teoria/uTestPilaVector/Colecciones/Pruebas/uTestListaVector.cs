@@ -26,7 +26,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -43,7 +43,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -58,7 +58,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -73,7 +73,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darItems().Length);
             Assert.AreEqual(500, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -88,7 +88,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
             Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -103,7 +103,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -118,7 +118,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -135,7 +135,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -150,7 +150,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -165,7 +165,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -180,7 +180,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -195,7 +195,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darItems().Length);
             Assert.AreEqual(500, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -210,7 +210,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darItems().Length);
             Assert.AreEqual(500, testLista.darCapacidad());
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -225,7 +225,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -240,7 +240,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -255,7 +255,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -270,7 +270,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -287,7 +287,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -302,7 +302,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -317,7 +317,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -332,7 +332,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -348,7 +348,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -363,7 +363,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -378,7 +378,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(500, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -393,7 +393,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -409,7 +409,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -424,7 +424,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darItems().Length);
             Assert.AreEqual(500, testLista.darCapacidad());
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -439,7 +439,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darItems().Length);
             Assert.AreEqual(500, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(500, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -454,7 +454,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(00, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -470,7 +470,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -485,7 +485,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
             Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -500,7 +500,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -515,7 +515,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -531,7 +531,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -546,7 +546,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -561,7 +561,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -576,7 +576,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -592,7 +592,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -607,7 +607,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -622,7 +622,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -637,7 +637,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
             Assert.AreEqual(0, testLista.darCapacidad());
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -656,7 +656,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             #endregion
             }
@@ -689,7 +689,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
             Assert.AreEqual(int.MaxValue / 16, testLista.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -717,7 +717,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testLista.ajustarFlexibilidad(true));
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
@@ -732,7 +732,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testLista.ajustarFlexibilidad(false));
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
@@ -747,7 +747,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testLista.ajustarFlexibilidad(false));
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darCapacidad());
@@ -763,7 +763,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testLista.ajustarFactorCrecimiento(3000));
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(3000, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darCapacidad());
@@ -778,7 +778,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(true, testLista.ajustarFactorCrecimiento((int.MaxValue / 16) - testLista.darItems().Length));
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(int.MaxValue / 16 - testLista.darItems().Length, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(500, testLista.darCapacidad());
@@ -793,7 +793,7 @@ namespace uTestDemoColecciones
             #endregion
             #region Probar y Comprobar
             Assert.AreEqual(false, testLista.ajustarFactorCrecimiento(int.MaxValue / 16));
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
@@ -855,13 +855,13 @@ namespace uTestDemoColecciones
         #endregion
         #region Consultores
         [TestMethod]
-        public void uTestEsDinamica()
+        public void uTestesFlexible()
             {
             #region Configurar
             testLista = new clsListaVector<int>();
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             #endregion
             }
         #endregion
@@ -881,7 +881,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(1, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -907,7 +907,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1003, testLista.darCapacidad());
             Assert.AreEqual(1003, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -925,7 +925,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(int.MaxValue / 16, testLista.darLongitud());
             Assert.AreEqual(int.MaxValue / 16, testLista.darCapacidad());
             Assert.AreEqual(int.MaxValue / 16, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -945,7 +945,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -961,11 +961,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(-1, 4));
+            Assert.AreEqual(false, testLista.insertar(-1, 4));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -979,11 +979,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(-1, 4));
+            Assert.AreEqual(false, testLista.insertar(-1, 4));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());   //Fixed
+            Assert.AreEqual(true, testLista.esFlexible());   //Fixed
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1001,11 +1001,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(-1, 4));
+            Assert.AreEqual(false, testLista.insertar(-1, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());  //Fixed
             Assert.AreEqual(3, testLista.darItems().Length); //Fixed
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1020,11 +1020,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(-1, 4));
+            Assert.AreEqual(false, testLista.insertar(-1, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1043,11 +1043,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(-1, 4));
+            Assert.AreEqual(false, testLista.insertar(-1, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1067,11 +1067,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(-1, 4));
+            Assert.AreEqual(false, testLista.insertar(-1, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1087,11 +1087,11 @@ namespace uTestDemoColecciones
             testItems[0] = 4;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(1, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1106,11 +1106,11 @@ namespace uTestDemoColecciones
             testItems[0] = 4;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(1, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1129,11 +1129,11 @@ namespace uTestDemoColecciones
             testItems[3] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1003, testLista.darCapacidad());
             Assert.AreEqual(1003, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1148,11 +1148,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(0, 4));
+            Assert.AreEqual(false, testLista.insertar(0, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1172,11 +1172,11 @@ namespace uTestDemoColecciones
             testItems[3] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1197,11 +1197,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1216,11 +1216,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(2, 4));
+            Assert.AreEqual(false, testLista.insertar(2, 4));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1234,11 +1234,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(2, 4));
+            Assert.AreEqual(false, testLista.insertar(2, 4));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1257,11 +1257,11 @@ namespace uTestDemoColecciones
             testItems[3] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(2, 4));
+            Assert.AreEqual(true, testLista.insertar(2, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1003, testLista.darCapacidad());
             Assert.AreEqual(1003, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1276,11 +1276,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(2, 4));
+            Assert.AreEqual(false, testLista.insertar(2, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1300,11 +1300,11 @@ namespace uTestDemoColecciones
             testItems[3] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(2, 4));
+            Assert.AreEqual(true, testLista.insertar(2, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1325,11 +1325,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(2, 4));
+            Assert.AreEqual(true, testLista.insertar(2, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1345,11 +1345,11 @@ namespace uTestDemoColecciones
             testItems[0] = 4;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(1, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1364,11 +1364,11 @@ namespace uTestDemoColecciones
             testItems[0] = 4;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(0, 4));
+            Assert.AreEqual(true, testLista.insertar(0, 4));
             Assert.AreEqual(1, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1387,11 +1387,11 @@ namespace uTestDemoColecciones
             testItems[3] = 4;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(3, 4));
+            Assert.AreEqual(true, testLista.insertar(3, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1003, testLista.darCapacidad());
             Assert.AreEqual(1003, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1406,11 +1406,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(3, 4));
+            Assert.AreEqual(false, testLista.insertar(3, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1430,11 +1430,11 @@ namespace uTestDemoColecciones
             testItems[3] = 4;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(3, 4));
+            Assert.AreEqual(true, testLista.insertar(3, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1455,11 +1455,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.insertarEn(3, 4));
+            Assert.AreEqual(true, testLista.insertar(3, 4));
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1474,11 +1474,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(4, 4));
+            Assert.AreEqual(false, testLista.insertar(4, 4));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1492,11 +1492,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(4, 4));
+            Assert.AreEqual(false, testLista.insertar(4, 4));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1510,11 +1510,11 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems); //Fixed
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(4, 4));
+            Assert.AreEqual(false, testLista.insertar(4, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());//Fixed
             Assert.AreEqual(3, testLista.darItems().Length);//Fixed
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1529,11 +1529,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(4, 4));
+            Assert.AreEqual(false, testLista.insertar(4, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1552,11 +1552,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(4, 4));
+            Assert.AreEqual(false, testLista.insertar(4, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1576,11 +1576,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.insertarEn(4, 4));
+            Assert.AreEqual(false, testLista.insertar(4, 4));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1597,12 +1597,12 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1616,12 +1616,12 @@ namespace uTestDemoColecciones
             testItems = new int[5]; //Fixed
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(5, testLista.darCapacidad()); //Fixed
             Assert.AreEqual(5, testLista.darItems().Length);//Fixed
-            Assert.AreEqual(false, testLista.esDinamica());//Fixed
+            Assert.AreEqual(false, testLista.esFlexible());//Fixed
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1635,12 +1635,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1655,12 +1655,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1679,12 +1679,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(-1,ref testItem));
+            Assert.AreEqual(false, testLista.extraer(-1,ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1704,12 +1704,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1724,12 +1724,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1743,12 +1743,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1763,12 +1763,12 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 2, 3, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(0,ref testItem));
+            Assert.AreEqual(true, testLista.extraer(0,ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1784,12 +1784,12 @@ namespace uTestDemoColecciones
             testItems = new int[3] {2, 3, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1808,12 +1808,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1833,12 +1833,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1853,12 +1853,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(2, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(2, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1872,12 +1872,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(2, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(2, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1892,12 +1892,12 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 1, 2, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1913,12 +1913,12 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 1, 2, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1937,12 +1937,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1962,12 +1962,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.extraerEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.extraer(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(2, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -1982,12 +1982,12 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2001,12 +2001,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2021,12 +2021,12 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 1, 2, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2041,12 +2041,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2065,12 +2065,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(3,ref testItem));
+            Assert.AreEqual(false, testLista.extraer(3,ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2090,12 +2090,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2110,12 +2110,12 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2129,12 +2129,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2148,12 +2148,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2168,12 +2168,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2192,12 +2192,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2217,12 +2217,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.extraerEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.extraer(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2239,11 +2239,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(-1, 777));
+            Assert.AreEqual(false, testLista.modificar(-1, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2257,11 +2257,11 @@ namespace uTestDemoColecciones
             testItems = new int[5];//Fixed
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(-1, 777));
+            Assert.AreEqual(false, testLista.modificar(-1, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(5, testLista.darCapacidad());//Fixed
             Assert.AreEqual(5, testLista.darItems().Length);//Fixed
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2275,11 +2275,11 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(-1, 777));
+            Assert.AreEqual(false, testLista.modificar(-1, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2294,11 +2294,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(-1, 777));
+            Assert.AreEqual(false, testLista.modificar(-1, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2317,11 +2317,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(-1, 777));
+            Assert.AreEqual(false, testLista.modificar(-1, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2341,11 +2341,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(-1, 777));
+            Assert.AreEqual(false, testLista.modificar(-1, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2360,11 +2360,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(0, 777));
+            Assert.AreEqual(false, testLista.modificar(0, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2378,11 +2378,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(0, 777));
+            Assert.AreEqual(false, testLista.modificar(0, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2397,11 +2397,11 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 777, 2, 3 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(0, 777));
+            Assert.AreEqual(true, testLista.modificar(0, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2417,11 +2417,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(0, 777));
+            Assert.AreEqual(true, testLista.modificar(0, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2440,11 +2440,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(0, 777));
+            Assert.AreEqual(true, testLista.modificar(0, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2464,11 +2464,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(0, 777));
+            Assert.AreEqual(true, testLista.modificar(0, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2483,11 +2483,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(2, 777));
+            Assert.AreEqual(false, testLista.modificar(2, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2501,11 +2501,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(2, 777));
+            Assert.AreEqual(false, testLista.modificar(2, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2520,11 +2520,11 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 1, 2, 777 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(2, 777));
+            Assert.AreEqual(true, testLista.modificar(2, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2540,11 +2540,11 @@ namespace uTestDemoColecciones
             testItems = new int[3] { 1, 2, 777 };
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(2, 777));
+            Assert.AreEqual(true, testLista.modificar(2, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2563,11 +2563,11 @@ namespace uTestDemoColecciones
             testItems[2] = 777;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(2, 777));
+            Assert.AreEqual(true, testLista.modificar(2, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2587,11 +2587,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.modificarEn(2, 777));
+            Assert.AreEqual(true, testLista.modificar(2, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2606,11 +2606,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(0, 777));
+            Assert.AreEqual(false, testLista.modificar(0, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2624,11 +2624,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(0, 777));
+            Assert.AreEqual(false, testLista.modificar(0, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2642,11 +2642,11 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(3, 777));
+            Assert.AreEqual(false, testLista.modificar(3, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2661,11 +2661,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(3, 777));
+            Assert.AreEqual(false, testLista.modificar(3, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2684,11 +2684,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(3, 777));
+            Assert.AreEqual(false, testLista.modificar(3, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2708,11 +2708,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(3, 777));
+            Assert.AreEqual(false, testLista.modificar(3, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2727,11 +2727,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(4, 777));
+            Assert.AreEqual(false, testLista.modificar(4, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2745,11 +2745,11 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(4, 777));
+            Assert.AreEqual(false, testLista.modificar(4, 777));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2763,11 +2763,11 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(4, 777));
+            Assert.AreEqual(false, testLista.modificar(4, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2782,11 +2782,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(4, 777));
+            Assert.AreEqual(false, testLista.modificar(4, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2805,11 +2805,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(4, 777));
+            Assert.AreEqual(false, testLista.modificar(4, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2829,11 +2829,11 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.modificarEn(4, 777));
+            Assert.AreEqual(false, testLista.modificar(4, 777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2850,12 +2850,12 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2869,12 +2869,12 @@ namespace uTestDemoColecciones
             testItems = new int[5]; //Fixed
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(5, testLista.darCapacidad());
             Assert.AreEqual(5, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2888,12 +2888,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2908,12 +2908,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2932,12 +2932,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2957,12 +2957,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(-1, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(-1, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2977,12 +2977,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -2996,12 +2996,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3015,12 +3015,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3035,12 +3035,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3059,12 +3059,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3084,12 +3084,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(1, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3104,12 +3104,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(2, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(2, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3123,12 +3123,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(2, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(2, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3142,12 +3142,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3162,12 +3162,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3186,12 +3186,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3211,12 +3211,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.recuperarEn(2, ref testItem));
+            Assert.AreEqual(true, testLista.recuperar(2, ref testItem));
             Assert.AreEqual(3, testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3231,12 +3231,12 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3250,12 +3250,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(0, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(0, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3269,12 +3269,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3289,12 +3289,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3313,12 +3313,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3338,12 +3338,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(3, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(3, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3358,12 +3358,12 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3377,12 +3377,12 @@ namespace uTestDemoColecciones
             testItems = new int[1000];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3396,12 +3396,12 @@ namespace uTestDemoColecciones
             testLista.ponerItems(testItems);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3416,12 +3416,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(3, testLista.darCapacidad());
             Assert.AreEqual(3, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3440,12 +3440,12 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3465,12 +3465,12 @@ namespace uTestDemoColecciones
             testLista.ajustarFlexibilidad(false);
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.recuperarEn(4, ref testItem));
+            Assert.AreEqual(false, testLista.recuperar(4, ref testItem));
             Assert.AreEqual(default(int), testItem);
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(false, testLista.esDinamica());
+            Assert.AreEqual(false, testLista.esFlexible());
             Assert.AreEqual(0, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3486,11 +3486,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.contieneA(0));
+            Assert.AreEqual(false, testLista.contiene(0));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3509,11 +3509,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(true, testLista.contieneA(3));
+            Assert.AreEqual(true, testLista.contiene(3));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3532,11 +3532,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(false, testLista.contieneA(777));
+            Assert.AreEqual(false, testLista.contiene(777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3551,11 +3551,11 @@ namespace uTestDemoColecciones
             testItems = new int[0];
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(-1, testLista.encontrarA(0));
+            Assert.AreEqual(-1, testLista.encontrar(0));
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(0, testLista.darCapacidad());
             Assert.AreEqual(0, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3574,11 +3574,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(2, testLista.encontrarA(3));
+            Assert.AreEqual(2, testLista.encontrar(3));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3597,11 +3597,11 @@ namespace uTestDemoColecciones
             testItems[2] = 2;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(1, testLista.encontrarA(2));
+            Assert.AreEqual(1, testLista.encontrar(2));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3620,11 +3620,11 @@ namespace uTestDemoColecciones
             testItems[2] = 3;
             #endregion
             #region Probar y Comprobar
-            Assert.AreEqual(-1, testLista.encontrarA(777));
+            Assert.AreEqual(-1, testLista.encontrar(777));
             Assert.AreEqual(3, testLista.darLongitud());
             Assert.AreEqual(1000, testLista.darCapacidad());
             Assert.AreEqual(1000, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3647,7 +3647,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(5, testLista.darCapacidad());
             Assert.AreEqual(5, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3666,7 +3666,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(4, testLista.darLongitud());
             Assert.AreEqual(4, testLista.darCapacidad());
             Assert.AreEqual(4, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             Assert.AreEqual(1000, testLista.darFactorCrecimiento());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
@@ -3683,7 +3683,7 @@ namespace uTestDemoColecciones
             Assert.AreEqual(0, testLista.darLongitud());
             Assert.AreEqual(4, testLista.darCapacidad());
             Assert.AreEqual(4, testLista.darItems().Length);
-            Assert.AreEqual(true, testLista.esDinamica());
+            Assert.AreEqual(true, testLista.esFlexible());
             CollectionAssert.AreEqual(testItems, testLista.darItems());
             #endregion
             }
