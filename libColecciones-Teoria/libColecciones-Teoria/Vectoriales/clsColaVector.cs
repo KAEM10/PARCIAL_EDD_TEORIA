@@ -404,6 +404,11 @@ namespace Servicios.Colecciones.Vectoriales
                 desencola = true;
                 atrLongitud--;
             }
+            else
+            {
+                prmItem = default(Tipo);
+            }
+
 
             return desencola;
         }
@@ -438,6 +443,10 @@ namespace Servicios.Colecciones.Vectoriales
             {
                 prmItem = atrItems[0];
                 reviso = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
             }
             return reviso;
         }

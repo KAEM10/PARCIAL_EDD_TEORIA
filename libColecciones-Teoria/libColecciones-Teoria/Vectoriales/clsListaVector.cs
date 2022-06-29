@@ -417,23 +417,33 @@ namespace Servicios.Colecciones.Vectoriales
         }
         public bool insertar(int prmIndice, Tipo prmItem)
         {
-            Tipo aux;
-            bool insertar = false;
-            if ((prmIndice >= 0) && (prmIndice < atrCapacidad))
+            bool inserto = false;
+            if ((prmIndice >= 0) && (prmIndice <= atrLongitud))
             {
-                if ((atrLongitud > 0))
+                if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrDinamica)
                 {
-                    for (int i = prmIndice; i < (atrLongitud - 1); i++)
-                    {
-                        aux = atrItems[i];
-                        atrItems[i] = prmItem;
-                    }
-                    insertar = true;
-                    atrLongitud--;
+                    Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrCapacidad];
+                    Array.Copy(atrItems, atrItemsAux, atrItems.Length);
+                    atrItems = atrItemsAux;
+
+                    atrCapacidad = atrFactorCrecimiento + atrCapacidad;
+
                 }
+                if ((prmIndice < atrCapacidad) && (atrLongitud < atrCapacidad))
+                {
+                    for (int i = atrLongitud + 1; i > prmIndice; i--)
+                    {
+                        atrItems[i] = atrItems[i - 1];
+                    }
+                    atrItems[prmIndice] = prmItem;
+                    atrLongitud++;
+                    inserto = true;
+                    
+                }
+                
             }
 
-            return insertar;
+            return inserto;
         }
         public bool extraer(int prmIndice, ref Tipo prmItem)
         {
@@ -456,13 +466,32 @@ namespace Servicios.Colecciones.Vectoriales
 
             return extraer;
         }
-        public bool modificar(int prmindice, Tipo prmItem)
+        public bool modificar(int prmIndice, Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool modifico = false;
+            if((prmIndice >= 0) && (prmIndice < atrLongitud))
+            {
+                atrItems[prmIndice] = prmItem;
+                modifico = true;
+            }
+
+            return modifico;
         }
-        public bool recuperar(int prmindice,ref Tipo prmItem)
+        public bool recuperar(int prmIndice,ref Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool recupero = false;
+            if((prmIndice >= 0) && (prmIndice < atrLongitud))
+            {
+                prmItem = atrItems[prmIndice];
+                recupero = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
+            }
+
+
+            return recupero;
         }
         public bool reversar()
         {

@@ -370,7 +370,11 @@ namespace Servicios.Colecciones.Vectoriales
                 desapilo = true;
                 atrLongitud--;
             }
-            
+            else
+            {
+                prmItem = default(Tipo);
+            }
+
             return desapilo;
         }
         public bool revisar(ref Tipo prmItem)
@@ -380,6 +384,10 @@ namespace Servicios.Colecciones.Vectoriales
             {
                 prmItem = atrItems[0];
                 reviso = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
             }
             return reviso;
         }
