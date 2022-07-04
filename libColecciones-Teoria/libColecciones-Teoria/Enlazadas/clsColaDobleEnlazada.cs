@@ -55,13 +55,12 @@ namespace Servicios.Colecciones.Enlazadas
         #region Constructores
         public clsColaDobleEnlazada()
         {
-            testItems = new int[0];
             if (atrCapacidad == 0)
             {
                 atrCapacidad = 0;
                 atrFactorCrecimiento = 1000;
                 atrDinamica = true;
-                atrItems = new Tipo[atrCapacidad];
+                atrItems = null;
                 atrItems = default(Tipo[]);
             }
         }

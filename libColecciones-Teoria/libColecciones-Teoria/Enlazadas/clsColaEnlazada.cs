@@ -55,13 +55,12 @@ namespace Servicios.Colecciones.Enlazadas
         #region Constructores
         public clsColaEnlazada()
         {
-            testItems = new int[0];
             if (atrCapacidad == 0)
             {
                 atrCapacidad = 0;
                 atrFactorCrecimiento = 1000;
                 atrDinamica = true;
-                atrItems = new Tipo[atrCapacidad];
+                atrItems = null;
             }
         }
         #endregion
@@ -70,22 +69,26 @@ namespace Servicios.Colecciones.Enlazadas
         {
             bool atrTest = true;
             atrItems = prmItems;
+            atrCapacidad = atrItems.Length;
+            atrLongitud = atrItems.Length;
+            if (prmItems.Length == 0)
+            {
+                atrCapacidad = atrItems.Length;
+                atrLongitud = atrItems.Length;
+                atrTest = false;
+            }
             if (prmItems.Length == int.MaxValue / 16)
             {
                 atrCapacidad = atrItems.Length;
                 atrLongitud = atrItems.Length;
-                atrFactorCrecimiento = 0;
-                atrDinamica = false;
+                atrTest = true;
             }
-            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            if (prmItems.Length == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
+                atrItems = null;
                 atrLongitud = 0;
                 atrTest = false;
-                atrItems = new Tipo[0];
             }
-            atrCapacidad = atrItems.Length;
-            atrLongitud = atrItems.Length;
             return atrTest;
         }
         public bool ajustarFlexibilidad(bool prmFlexibilidad)
