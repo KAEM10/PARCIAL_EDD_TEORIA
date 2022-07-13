@@ -9,5 +9,18 @@ namespace Servicios.Colecciones.Nodos
         private clsNodoEnlazado<Tipo> atrSiguiente;
         #endregion 
         #endregion
+        #region Constructor
+        public clsNodoEnlazado(Tipo prmitem)
+        {
+            this.atrSiguiente = null;
+            this.atrItem = prmitem;
+        }
+        #endregion
+        #region Metodo pasaritems
+        public clsNodoEnlazado<Tipo> pasarItems()
+        {
+            return atrSiguiente;
+        }
+        #endregion
     }
 }

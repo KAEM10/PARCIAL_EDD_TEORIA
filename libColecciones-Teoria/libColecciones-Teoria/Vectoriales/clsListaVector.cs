@@ -7,10 +7,10 @@ namespace Servicios.Colecciones.Vectoriales
     {
         #region Atributos
         private Tipo[] atrItems;
-        private int atrCapacidad;
+        private int atrCapacidad = 0;
         private int atrLongitud;
-        private bool atrDinamica;
-        private int atrFactorCrecimiento;
+        private bool atrDinamica = true;
+        private int atrFactorCrecimiento = 1000;
         private bool atrAjustarFC;
         private bool atrFlexibilidad;
         private bool atrReversar;
@@ -45,9 +45,6 @@ namespace Servicios.Colecciones.Vectoriales
             testItems = new int[0];
             if (atrCapacidad == 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
         }
@@ -55,9 +52,6 @@ namespace Servicios.Colecciones.Vectoriales
         {
             if (prmCapacidad < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16)
@@ -69,23 +63,15 @@ namespace Servicios.Colecciones.Vectoriales
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
                 atrItems = new Tipo[atrCapacidad];
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
             }
             else if (prmCapacidad == int.MaxValue)
             {
-                atrCapacidad = 0;
                 atrItems = new Tipo[atrCapacidad];
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
             }
             else
             {
                 atrCapacidad = prmCapacidad;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
 
@@ -94,44 +80,26 @@ namespace Servicios.Colecciones.Vectoriales
         {
             if (prmCapacidad < 0 && prmDinamica == true)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad < 0 && prmDinamica == false)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmDinamica == true)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmDinamica == false)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue && prmDinamica == true)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue && prmDinamica == false)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad > 0 && prmDinamica == false)
@@ -144,8 +112,6 @@ namespace Servicios.Colecciones.Vectoriales
             else
             {
                 atrCapacidad = prmCapacidad;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
         }
@@ -153,51 +119,30 @@ namespace Servicios.Colecciones.Vectoriales
         {
             if (prmCapacidad < 0 && prmFactor < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad < 0 && prmFactor == 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue && prmFactor == 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue && prmFactor < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue && prmFactor > 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue && prmFactor == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 && prmFactor < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 && prmFactor == 0)
@@ -209,93 +154,56 @@ namespace Servicios.Colecciones.Vectoriales
             }
             else if (prmCapacidad == int.MaxValue / 16 && prmFactor > 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 && prmFactor == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmFactor < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmFactor == 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmFactor > 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
                 atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmFactor == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad < 0 && prmFactor == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == 0 && prmFactor == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad > 0 && prmFactor == int.MaxValue / 16 + 1)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == 0 && prmFactor < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == 0 && prmFactor == 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == 0 && prmFactor > 0)
             {
-                atrCapacidad = 0;
                 atrFactorCrecimiento = 500;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad > 0 && prmFactor < 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad > 0 && prmFactor == 0)
@@ -309,21 +217,15 @@ namespace Servicios.Colecciones.Vectoriales
             {
                 atrCapacidad = 500;
                 atrFactorCrecimiento = 500;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad < 0 && prmFactor > 0)
             {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else
             {
                 atrCapacidad = prmCapacidad;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
                 atrItems = new Tipo[atrCapacidad];
             }
         }
@@ -438,9 +340,9 @@ namespace Servicios.Colecciones.Vectoriales
                     atrItems[prmIndice] = prmItem;
                     atrLongitud++;
                     inserto = true;
-                    
+
                 }
-                
+
             }
 
             return inserto;
@@ -449,7 +351,7 @@ namespace Servicios.Colecciones.Vectoriales
         {
             bool extraer = false;
 
-            if((prmIndice >= 0) && (prmIndice < atrLongitud))
+            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
             {
                 if ((atrLongitud > 0) && (atrItems[prmIndice] != null))
                 {
@@ -461,7 +363,7 @@ namespace Servicios.Colecciones.Vectoriales
                     extraer = true;
                     atrLongitud--;
                 }
-                
+
             }
 
             return extraer;
@@ -469,7 +371,7 @@ namespace Servicios.Colecciones.Vectoriales
         public bool modificar(int prmIndice, Tipo prmItem)
         {
             bool modifico = false;
-            if((prmIndice >= 0) && (prmIndice < atrLongitud))
+            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
             {
                 atrItems[prmIndice] = prmItem;
                 modifico = true;
@@ -477,10 +379,10 @@ namespace Servicios.Colecciones.Vectoriales
 
             return modifico;
         }
-        public bool recuperar(int prmIndice,ref Tipo prmItem)
+        public bool recuperar(int prmIndice, ref Tipo prmItem)
         {
             bool recupero = false;
-            if((prmIndice >= 0) && (prmIndice < atrLongitud))
+            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
             {
                 prmItem = atrItems[prmIndice];
                 recupero = true;
@@ -550,9 +452,9 @@ namespace Servicios.Colecciones.Vectoriales
 
             if (atrLongitud > 0)
             {
-                for(int i = 0; i < atrLongitud; i++)
+                for (int i = 0; i < atrLongitud; i++)
                 {
-                    if(atrItems[i].Equals(prmItem))
+                    if (atrItems[i].Equals(prmItem))
                     {
                         contiene = true;
                         break;

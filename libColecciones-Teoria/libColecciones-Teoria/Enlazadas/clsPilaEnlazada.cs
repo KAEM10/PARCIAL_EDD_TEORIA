@@ -183,6 +183,15 @@ namespace Servicios.Colecciones.Enlazadas
                 atrLongitud = 0;
                 atrTest = false;
             }
+            else
+            {
+                clsPilaEnlazada<Tipo> varPila = new clsPilaEnlazada<Tipo>();
+                //varPila.pasarItems = prmItems.Length;
+                for (int i = 0; i < atrItems.Length; i++)
+                {
+
+                }
+            }
             return atrTest;
         }
         public bool ajustarFlexibilidad(bool prmFlexibilidad)
