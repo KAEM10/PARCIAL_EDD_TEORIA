@@ -91,127 +91,33 @@ namespace Servicios.Colecciones.Enlazadas
             }
             return atrTest;
         }
-        public bool ajustarFlexibilidad(bool prmFlexibilidad)
-        {
-            if (prmFlexibilidad == false && atrCapacidad > 0)
-            {
-                atrFlexibilidad = true;
-                atrDinamica = false;
-                atrFactorCrecimiento = 0;
-            }
-            else if (prmFlexibilidad == false && atrCapacidad == 0)
-            {
-                atrFlexibilidad = false;
-            }
-            else
-            {
-                atrFlexibilidad = false;
-            }
-            return atrFlexibilidad;
-        }
-        public bool ajustarFactorCrecimiento(int prmFactorCre)
-        {
-            if (prmFactorCre == int.MaxValue / 16 - atrItems.Length)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
-            else if (prmFactorCre == int.MaxValue / 16)
-            {
-                atrFactorCrecimiento = 0;
-                atrAjustarFC = false;
-            }
-            else if (prmFactorCre > 0)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
-
-            return atrAjustarFC;
-        }
+        
+        
         #endregion
         #region CRUD
         public bool desencolar(ref Tipo prmItem)
         {
             bool desencola = false;
-            if (atrLongitud > 0)
-            {
-                prmItem = atrItems[0];
-                for (int i = 0; i < (atrLongitud - 1); i++)
-                {
-                    atrItems[i] = atrItems[i + 1];
-                }
-                desencola = true;
-                atrLongitud--;
-            }
-
+            
             return desencola;
         }
         public bool encolar(Tipo prmItem)
         {
             bool encola = false;
-            if (atrCapacidad == 0)
-            {
-                atrCapacidad = atrFactorCrecimiento;
-                atrItems = new Tipo[atrCapacidad];
-            }
-            if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrDinamica)
-            {
-                Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrCapacidad];
-                Array.Copy(atrItems, atrItemsAux, atrItems.Length);
-                atrItems = atrItemsAux;
-
-                atrCapacidad = atrFactorCrecimiento + atrCapacidad;
-            }
-            if (atrLongitud < atrCapacidad)
-            {
-                atrItems[atrLongitud] = prmItem;
-                atrLongitud++;
-                encola = true;
-            }
+            
             return encola;
         }
         public bool revisar(ref Tipo prmItem)
         {
             bool reviso = false;
-            if (atrLongitud > 0)
-            {
-                prmItem = atrItems[0];
-                reviso = true;
-            }
+            
             return reviso;
         }
         public bool reversar()
         {
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
+            bool reverso = false;
 
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
+            return reverso;
         }
         #endregion
         #endregion
