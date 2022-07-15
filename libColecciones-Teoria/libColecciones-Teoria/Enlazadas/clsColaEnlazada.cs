@@ -12,14 +12,8 @@ namespace Servicios.Colecciones.Enlazadas
         private clsNodoEnlazado<Tipo> atrUltimo;
         #endregion
         private Tipo[] atrItems;
-        private int atrCapacidad;
         private int atrLongitud;
-        private bool atrDinamica;
-        private int atrFactorCrecimiento;
-        private bool atrAjustarFC;
-        private bool atrFlexibilidad;
         private bool atrReversar;
-        private int[] testItems;
         #endregion
         #region Metodos
         #region Accesores
@@ -27,21 +21,9 @@ namespace Servicios.Colecciones.Enlazadas
         {
             return atrItems;
         }
-        public int darCapacidad() //metodo para acceder a la capacidad
-        {
-            return atrCapacidad;
-        }
         public int darLongitud() //metodo para acceder a la longitud
         {
             return atrLongitud;
-        }
-        public bool esDinamica()// metodo para saber si es flexible
-        {
-            return atrDinamica;
-        }
-        public int darFactorCrecimiento() // metodo para acceder a el factorcrecimiento
-        {
-            return atrFactorCrecimiento;
         }
         public clsNodoEnlazado<Tipo> darPrimero()
         {
@@ -55,24 +37,52 @@ namespace Servicios.Colecciones.Enlazadas
         #region Constructores
         public clsColaEnlazada()
         {
-            if (atrCapacidad == 0)
-            {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
-                atrItems = null;
-            }
+            atrLongitud = 0;
+            atrItems = null;
+            atrPrimero = null;
+            atrUltimo = null;
         }
         #endregion
         #region Mutadores
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
-            
+            atrItems = prmItems;
+            if (prmItems.Length == 0)
+            {
+                atrTest = false;
+            }
+            else if (prmItems.Length == int.MaxValue / 16)
+            {
+                atrLongitud = atrItems.Length;
+            }
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            {
+                atrItems = null;
+                atrLongitud = 0;
+                atrTest = false;
+            }
+            else
+            {
+                atrLongitud = atrItems.Length;
+                for (int i = 0; i < atrItems.Length; i++)
+                {
+                    clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
+                    NodoActual.darItem = atrItems[i];
+                    if (atrPrimero == null)
+                    {
+                        atrPrimero = NodoActual;
+                        atrUltimo = atrPrimero;
+                    }
+                    else
+                    {
+                        atrUltimo.darSiguiente = NodoActual;
+                        atrUltimo = atrPrimero;
+                    }
+                }
+            }
             return atrTest;
         }
-        
-        
         #endregion
         #region CRUD
         public bool desencolar(ref Tipo prmItem)
