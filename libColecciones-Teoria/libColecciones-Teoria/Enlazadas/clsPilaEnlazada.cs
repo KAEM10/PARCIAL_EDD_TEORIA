@@ -12,36 +12,18 @@ namespace Servicios.Colecciones.Enlazadas
         private clsNodoEnlazado<Tipo> atrUltimo;
         #endregion
         private Tipo[] atrItems;
-        private int atrCapacidad;
         private int atrLongitud;
-        private bool atrDinamica;
-        private int atrFactorCrecimiento;
-        private bool atrAjustarFC;
-        private bool atrFlexibilidad;
         private bool atrReversar;
-        private int[] testItems;
         #endregion
         #region Metodos
         #region Accesores
-        public Tipo[] darItems() //metodo para accceder al arreglo
+        public Tipo[] darItems() 
         {
             return atrItems;
         }
-        public int darCapacidad() //metodo para acceder a la capacidad
-        {
-            return atrCapacidad;
-        }
-        public int darLongitud() //metodo para acceder a la longitud
+        public int darLongitud() 
         {
             return atrLongitud;
-        }
-        public bool esFlexible()// metodo para saber si es flexible
-        {
-            return atrDinamica;
-        }
-        public int darFactorCrecimiento() // metodo para acceder a el factorcrecimiento
-        {
-            return atrFactorCrecimiento;
         }
         public clsNodoEnlazado<Tipo> darPrimero()
         {
@@ -55,13 +37,10 @@ namespace Servicios.Colecciones.Enlazadas
         #region Constructores
         public clsPilaEnlazada()
         {
-            if (atrCapacidad == 0)
-            {
-                atrCapacidad = 0;
-                atrFactorCrecimiento = 1000;
-                atrDinamica = true;
-                atrItems = null;
-            }
+            atrLongitud = 0;
+            atrItems = null;
+            atrPrimero = null;
+            atrUltimo = null;
         }
         #endregion
         #region CRUDs
@@ -95,21 +74,15 @@ namespace Servicios.Colecciones.Enlazadas
         {
             bool atrTest = true;
             atrItems = prmItems;
-            atrCapacidad = atrItems.Length;
-            atrLongitud = atrItems.Length;
             if (prmItems.Length == 0)
             {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
                 atrTest = false;
             }
-            if (prmItems.Length == int.MaxValue / 16)
+            else if (prmItems.Length == int.MaxValue / 16)
             {
-                atrCapacidad = atrItems.Length;
                 atrLongitud = atrItems.Length;
-                atrTest = true;
             }
-            if (prmItems.Length == int.MaxValue / 16 + 1)
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
             {
                 atrItems = null;
                 atrLongitud = 0;
@@ -117,52 +90,24 @@ namespace Servicios.Colecciones.Enlazadas
             }
             else
             {
-                clsPilaEnlazada<Tipo> varPila = new clsPilaEnlazada<Tipo>();
-                //varPila.pasarItems = prmItems.Length;
+                atrLongitud = atrItems.Length;
                 for (int i = 0; i < atrItems.Length; i++)
                 {
-
+                    clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
+                    NodoActual.darItem = atrItems[i];
+                    if (atrPrimero == null)
+                    {
+                        atrPrimero = NodoActual;
+                        atrUltimo = atrPrimero;
+                    }
+                    else
+                    {
+                        atrUltimo.darSiguiente = NodoActual;
+                        atrUltimo = atrPrimero;
+                    }
                 }
             }
             return atrTest;
-        }
-        public bool ajustarFlexibilidad(bool prmFlexibilidad)
-        {
-            if (prmFlexibilidad == false && atrCapacidad > 0)
-            {
-                atrFlexibilidad = true;
-                atrDinamica = false;
-                atrFactorCrecimiento = 0;
-            }
-            else if (prmFlexibilidad == false && atrCapacidad == 0)
-            {
-                atrFlexibilidad = false;
-            }
-            else
-            {
-                atrFlexibilidad = false;
-            }
-            return atrFlexibilidad;
-        }
-        public bool ajustarFactorCrecimiento(int prmFactorCre)
-        {
-            if (prmFactorCre == int.MaxValue / 16 - atrItems.Length)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
-            else if (prmFactorCre == int.MaxValue / 16)
-            {
-                atrFactorCrecimiento = 0;
-                atrAjustarFC = false;
-            }
-            else if (prmFactorCre > 0)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
-
-            return atrAjustarFC;
         }
         #endregion
         #endregion
