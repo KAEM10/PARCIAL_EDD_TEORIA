@@ -22,5 +22,12 @@ namespace Servicios.Colecciones.Nodos
             return atrSiguiente;
         }
         #endregion
+
+        public void enlazarSiguiente(clsNodoEnlazado<Tipo> nodoSiguiente)
+        {
+            atrSiguiente = nodoSiguiente;
+        }
+
+        
     }
 }

@@ -20,6 +20,7 @@ namespace Servicios.Colecciones.Enlazadas
         private bool atrFlexibilidad;
         private bool atrReversar;
         private int[] testItems;
+        
         #endregion
         #region Metodos
         #region Accesores
@@ -68,7 +69,27 @@ namespace Servicios.Colecciones.Enlazadas
         public bool apilar(Tipo prmItem)
         {
             bool apilo = false;
-            
+            clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(prmItem);
+            //clsNodoEnlazado<Tipo> nodoTemporal;
+            if(atrPrimero == null)
+            {
+                atrPrimero = nodoNuevo;
+                atrUltimo = nodoNuevo;
+                apilo = true;
+            }
+            else
+            {
+                atrPrimero = nodoNuevo;
+                apilo = true;
+            }
+
+            //nodoTemporal = atrPrimero;
+            //while (nodoTemporal.pasarItems() != null)
+            //{
+            //    nodoTemporal = nodoTemporal.pasarItems();
+            //}
+            atrLongitud++;
+            actualizarAtrItems();
             return apilo;
         }
         public bool desapilar(ref Tipo prmItem)
@@ -89,41 +110,28 @@ namespace Servicios.Colecciones.Enlazadas
 
             return reverso;
         }
+
+        public void actualizarAtrItems()
+        {
+            atrItems = new Tipo[atrLongitud];
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
+            for(int i = 0; i < atrLongitud; i++)
+            {
+                atrItems[i] = nodoTemporal.darItem();
+                if(nodoTemporal.pasarItems() != null)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                }
+            }
+
+        }
+
         #endregion
         #region Mutadores
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
-            atrItems = prmItems;
-            atrCapacidad = atrItems.Length;
-            atrLongitud = atrItems.Length;
-            if (prmItems.Length == 0)
-            {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
-                atrTest = false;
-            }
-            if (prmItems.Length == int.MaxValue / 16)
-            {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
-                atrTest = true;
-            }
-            if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrItems = null;
-                atrLongitud = 0;
-                atrTest = false;
-            }
-            else
-            {
-                clsPilaEnlazada<Tipo> varPila = new clsPilaEnlazada<Tipo>();
-                //varPila.pasarItems = prmItems.Length;
-                for (int i = 0; i < atrItems.Length; i++)
-                {
-
-                }
-            }
+            
             return atrTest;
         }
         public bool ajustarFlexibilidad(bool prmFlexibilidad)

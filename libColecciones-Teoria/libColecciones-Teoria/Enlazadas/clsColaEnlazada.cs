@@ -68,27 +68,7 @@ namespace Servicios.Colecciones.Enlazadas
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
-            atrItems = prmItems;
-            atrCapacidad = atrItems.Length;
-            atrLongitud = atrItems.Length;
-            if (prmItems.Length == 0)
-            {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
-                atrTest = false;
-            }
-            if (prmItems.Length == int.MaxValue / 16)
-            {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
-                atrTest = true;
-            }
-            if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrItems = null;
-                atrLongitud = 0;
-                atrTest = false;
-            }
+            
             return atrTest;
         }
         

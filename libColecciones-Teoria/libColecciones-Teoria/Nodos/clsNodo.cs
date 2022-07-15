@@ -9,5 +9,9 @@ namespace Servicios.Colecciones.Nodos
         protected Tipo atrItem;
         #endregion 
         #endregion
+        public Tipo darItem()
+        {
+            return atrItem;
+        }
     }
 }
