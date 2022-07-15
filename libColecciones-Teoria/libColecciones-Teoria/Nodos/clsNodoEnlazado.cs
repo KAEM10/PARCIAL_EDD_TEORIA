@@ -2,7 +2,7 @@
 
 namespace Servicios.Colecciones.Nodos
 {
-    public class clsNodoEnlazado<Tipo>:clsNodo<Tipo> where Tipo : IComparable<Tipo>
+    public class clsNodoEnlazado<Tipo> : clsNodo<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         #region Asociativo
@@ -10,23 +10,16 @@ namespace Servicios.Colecciones.Nodos
         #endregion 
         #endregion
         #region Constructor
-        public clsNodoEnlazado()
+        public clsNodoEnlazado(Tipo prmitem)
         {
-            atrItem = default(Tipo);
-            atrSiguiente = null;
+            this.atrSiguiente = null;
+            this.atrItem = prmitem;
         }
         #endregion
-        #region Metodos
-        public Tipo darItem
+        #region Metodo pasaritems
+        public clsNodoEnlazado<Tipo> pasarItems()
         {
-            get { return atrItem; }
-            set { atrItem = value; }
-        }
-
-        public clsNodoEnlazado<Tipo> darSiguiente
-        {
-            get { return atrSiguiente; }
-            set { atrSiguiente = value; }
+            return atrSiguiente;
         }
         #endregion
 
@@ -35,6 +28,6 @@ namespace Servicios.Colecciones.Nodos
             atrSiguiente = nodoSiguiente;
         }
 
-        
+
     }
 }

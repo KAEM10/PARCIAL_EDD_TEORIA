@@ -47,40 +47,40 @@ namespace Servicios.Colecciones.Enlazadas
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
-            atrItems = prmItems;
-            if (prmItems.Length == 0)
-            {
-                atrTest = false;
-            }
-            else if (prmItems.Length == int.MaxValue / 16)
-            {
-                atrLongitud = atrItems.Length;
-            }
-            else if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrItems = null;
-                atrLongitud = 0;
-                atrTest = false;
-            }
-            else
-            {
-                atrLongitud = atrItems.Length;
-                for (int i = 0; i < atrItems.Length; i++)
-                {
-                    clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
-                    NodoActual.darItem = atrItems[i];
-                    if (atrPrimero == null)
-                    {
-                        atrPrimero = NodoActual;
-                        atrUltimo = atrPrimero;
-                    }
-                    else
-                    {
-                        atrUltimo.darSiguiente = NodoActual;
-                        atrUltimo = atrPrimero;
-                    }
-                }
-            }
+            //atrItems = prmItems;
+            //if (prmItems.Length == 0)
+            //{
+            //    atrTest = false;
+            //}
+            //else if (prmItems.Length == int.MaxValue / 16)
+            //{
+            //    atrLongitud = atrItems.Length;
+            //}
+            //else if (prmItems.Length == int.MaxValue / 16 + 1)
+            //{
+            //    atrItems = null;
+            //    atrLongitud = 0;
+            //    atrTest = false;
+            //}
+            //else
+            //{
+            //    atrLongitud = atrItems.Length;
+            //    for (int i = 0; i < atrItems.Length; i++)
+            //    {
+            //        clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
+            //        NodoActual.darItem = atrItems[i];
+            //        if (atrPrimero == null)
+            //        {
+            //            atrPrimero = NodoActual;
+            //            atrUltimo = atrPrimero;
+            //        }
+            //        else
+            //        {
+            //            atrUltimo.darSiguiente = NodoActual;
+            //            atrUltimo = atrPrimero;
+            //        }
+            //    }
+            //}
             return atrTest;
         }
         #endregion

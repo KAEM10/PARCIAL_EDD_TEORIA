@@ -15,4 +15,3 @@ C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColec
 C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
 C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb
 C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csprojAssemblyReference.cache
-D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones-Teoria.csproj.AssemblyReference.cache

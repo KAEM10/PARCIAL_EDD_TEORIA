@@ -17,11 +17,11 @@ namespace Servicios.Colecciones.Enlazadas
         #endregion
         #region Metodos
         #region Accesores
-        public Tipo[] darItems() 
+        public Tipo[] darItems()
         {
             return atrItems;
         }
-        public int darLongitud() 
+        public int darLongitud()
         {
             return atrLongitud;
         }
@@ -48,38 +48,33 @@ namespace Servicios.Colecciones.Enlazadas
         {
             bool apilo = false;
             clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(prmItem);
-            //clsNodoEnlazado<Tipo> nodoTemporal;
-            if(atrPrimero == null)
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
+            if (atrPrimero == null)
             {
                 atrPrimero = nodoNuevo;
                 atrUltimo = nodoNuevo;
-                apilo = true;
             }
             else
             {
+                nodoNuevo.enlazarSiguiente(nodoTemporal);
                 atrPrimero = nodoNuevo;
-                apilo = true;
             }
 
-            //nodoTemporal = atrPrimero;
-            //while (nodoTemporal.pasarItems() != null)
-            //{
-            //    nodoTemporal = nodoTemporal.pasarItems();
-            //}
+            
             atrLongitud++;
-            actualizarAtrItems();
+            apilo = actualizarAtrItems();
             return apilo;
         }
         public bool desapilar(ref Tipo prmItem)
         {
             bool desapilo = false;
-            
+
             return desapilo;
         }
         public bool revisar(ref Tipo prmItem)
         {
             bool reviso = false;
-            
+
             return reviso;
         }
         public bool reversar()
@@ -89,58 +84,67 @@ namespace Servicios.Colecciones.Enlazadas
             return reverso;
         }
 
-        public void actualizarAtrItems()
+        public bool actualizarAtrItems() // revisar para items en borde
+        {
+            bool actualizar = false;
+            if(atrLongitud > int.MaxValue / 16)
+            {
+                atrLongitud--;
+                return actualizar;
+            }
+            atrItems = new Tipo[atrLongitud];
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
+            for (int i = 0; i < atrLongitud; i++)
+            {
+                atrItems[i] = nodoTemporal.darItem();
+                if (nodoTemporal.pasarItems() != null)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                }
+            }
+            actualizar = true;
+            return actualizar;
+        }
+        #endregion
+        #region Mutadores
+
+        public bool ponerItems(Tipo[] prmItems) // revisar para items en borde
         {
             bool atrTest = true;
+            clsNodoEnlazado<Tipo> nodoTemporal;
             atrItems = prmItems;
-            if (prmItems.Length == 0)
+            if (prmItems.Length == int.MaxValue / 16 + 1)
             {
                 atrTest = false;
+                atrItems = new Tipo[0];
             }
-            else if (prmItems.Length == int.MaxValue / 16)
+            atrLongitud = atrItems.Length;
+
+            for (int i = atrItems.Length - 1; i >= 0; i--)
             {
-                atrLongitud = atrItems.Length;
-            }
-            else if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrItems = null;
-                atrLongitud = 0;
-                atrTest = false;
-            }
-            else
-            {
-                atrLongitud = atrItems.Length;
-                for (int i = 0; i < atrItems.Length; i++)
-                {
-                    clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
-                    NodoActual.darItem = atrItems[i];
+                if (atrItems[i] != null) { 
+                    clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(atrItems[i]);
+                    nodoTemporal = atrPrimero;
                     if (atrPrimero == null)
                     {
-                        atrPrimero = NodoActual;
-                        atrUltimo = atrPrimero;
+                        atrPrimero = nodoNuevo;
+                        atrUltimo = nodoNuevo;
                     }
                     else
                     {
-                        atrUltimo.darSiguiente = NodoActual;
-                        atrUltimo = atrPrimero;
+                        nodoNuevo.enlazarSiguiente(nodoTemporal);
+                        atrPrimero = nodoNuevo;
                     }
                 }
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
             }
-            else if (prmFactorCre == int.MaxValue / 16)
-            {
-                atrFactorCrecimiento = 0;
-                atrAjustarFC = false;
-            }
-            else if (prmFactorCre > 0)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
+
+
+
             return atrTest;
         }
+
         #endregion
         #endregion
+
     }
 }
