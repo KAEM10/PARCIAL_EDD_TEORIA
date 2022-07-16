@@ -47,40 +47,47 @@ namespace Servicios.Colecciones.Enlazadas
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
-            //atrItems = prmItems;
-            //if (prmItems.Length == 0)
-            //{
-            //    atrTest = false;
-            //}
-            //else if (prmItems.Length == int.MaxValue / 16)
-            //{
-            //    atrLongitud = atrItems.Length;
-            //}
-            //else if (prmItems.Length == int.MaxValue / 16 + 1)
-            //{
-            //    atrItems = null;
-            //    atrLongitud = 0;
-            //    atrTest = false;
-            //}
-            //else
-            //{
-            //    atrLongitud = atrItems.Length;
-            //    for (int i = 0; i < atrItems.Length; i++)
-            //    {
-            //        clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
-            //        NodoActual.darItem = atrItems[i];
-            //        if (atrPrimero == null)
-            //        {
-            //            atrPrimero = NodoActual;
-            //            atrUltimo = atrPrimero;
-            //        }
-            //        else
-            //        {
-            //            atrUltimo.darSiguiente = NodoActual;
-            //            atrUltimo = atrPrimero;
-            //        }
-            //    }
-            //}
+            
+            atrItems = prmItems;
+            if (prmItems.Length == 0)
+            {
+                atrTest = false;
+            }
+            else if (prmItems.Length == int.MaxValue / 16)
+            {
+                atrLongitud = atrItems.Length;
+                return atrTest;
+            }
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            {
+                atrLongitud = 0;
+                atrTest = false;
+                atrItems = new Tipo[0];
+                atrItems = default(Tipo[]);
+            }
+            else
+            {
+                atrLongitud = atrItems.Length;
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i] != null)
+                    {
+                        clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(atrItems[i]);
+                        
+                        if (atrPrimero == null)
+                        {
+                            atrPrimero = nodoNuevo;
+                            atrUltimo = nodoNuevo;
+                        }
+                        else
+                        {
+                            atrUltimo.enlazarSiguiente(nodoNuevo);
+                            atrUltimo = nodoNuevo;
+                        }
+                    }
+                }
+                
+            }
             return atrTest;
         }
         #endregion
@@ -88,26 +95,106 @@ namespace Servicios.Colecciones.Enlazadas
         public bool desencolar(ref Tipo prmItem)
         {
             bool desencola = false;
-            
+            if(atrLongitud > 0)
+            {
+                prmItem = atrPrimero.darItem();
+                atrPrimero = atrPrimero.pasarItems();
+                atrLongitud--;
+                desencola = actualizarAtrItems();
+            }
+            else
+            {
+                prmItem = default(Tipo);
+            }
             return desencola;
         }
         public bool encolar(Tipo prmItem)
         {
             bool encola = false;
-            
+            clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(prmItem);
+            if (atrPrimero == null)
+            {
+                atrPrimero = nodoNuevo;
+                atrUltimo = nodoNuevo;
+            }
+            else
+            {
+                atrUltimo.enlazarSiguiente(nodoNuevo);
+                atrUltimo = nodoNuevo;
+            }
+            atrLongitud++;
+            encola = actualizarAtrItems();
             return encola;
         }
         public bool revisar(ref Tipo prmItem)
         {
             bool reviso = false;
-            
+            if (atrLongitud > 0)
+            {
+                prmItem = atrPrimero.darItem();
+                reviso = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
+            }
             return reviso;
         }
         public bool reversar()
         {
-            bool reverso = false;
+            if (atrLongitud > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for (int i = atrLongitud - 1; i >= end; i--)
+                {
 
-            return reverso;
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                atrReversar = true;
+                atrPrimero = null;
+                atrUltimo = null;
+                ponerItems(atrItems);
+                return atrReversar;
+            }
+            else
+            {
+                return atrReversar;
+            }
+        }
+
+        public bool actualizarAtrItems() // revisar para items en borde
+        {
+            bool actualizar = false;
+            if (atrLongitud > int.MaxValue / 16)
+            {
+                atrLongitud--;
+                return actualizar;
+            }
+            atrItems = new Tipo[atrLongitud];
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
+            for (int i = 0; i < atrLongitud; i++)
+            {
+                atrItems[i] = nodoTemporal.darItem();
+                if (nodoTemporal.pasarItems() != null)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                }
+            }
+            actualizar = true;
+            return actualizar;
         }
         #endregion
         #endregion

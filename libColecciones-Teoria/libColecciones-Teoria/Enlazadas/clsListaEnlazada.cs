@@ -47,40 +47,47 @@ namespace Servicios.Colecciones.Enlazadas
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
-            //atrItems = prmItems;
-            //if (prmItems.Length == 0)
-            //{
-            //    atrTest = false;
-            //}
-            //else if (prmItems.Length == int.MaxValue / 16)
-            //{
-            //    atrLongitud = atrItems.Length;
-            //}
-            //else if (prmItems.Length == int.MaxValue / 16 + 1)
-            //{
-            //    atrItems = null;
-            //    atrLongitud = 0;
-            //    atrTest = false;
-            //}
-            //else
-            //{
-            //    atrLongitud = atrItems.Length;
-            //    for (int i = 0; i < atrItems.Length; i++)
-            //    {
-            //        clsNodoEnlazado<Tipo> NodoActual = new clsNodoEnlazado<Tipo>();
-            //        NodoActual.darItem = atrItems[i];
-            //        if (atrPrimero == null)
-            //        {
-            //            atrPrimero = NodoActual;
-            //            atrUltimo = atrPrimero;
-            //        }
-            //        else
-            //        {
-            //            atrUltimo.darSiguiente = NodoActual;
-            //            atrUltimo = atrPrimero;
-            //        }
-            //    }
-            //}
+
+            atrItems = prmItems;
+            if (prmItems.Length == 0)
+            {
+                atrTest = false;
+            }
+            else if (prmItems.Length == int.MaxValue / 16)
+            {
+                atrLongitud = atrItems.Length;
+                return atrTest;
+            }
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            {
+                atrLongitud = 0;
+                atrTest = false;
+                atrItems = new Tipo[0];
+                atrItems = default(Tipo[]);
+            }
+            else
+            {
+                atrLongitud = atrItems.Length;
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i] != null)
+                    {
+                        clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(atrItems[i]);
+
+                        if (atrPrimero == null)
+                        {
+                            atrPrimero = nodoNuevo;
+                            atrUltimo = nodoNuevo;
+                        }
+                        else
+                        {
+                            atrUltimo.enlazarSiguiente(nodoNuevo);
+                            atrUltimo = nodoNuevo;
+                        }
+                    }
+                }
+
+            }
             return atrTest;
         }
         #endregion
@@ -88,6 +95,20 @@ namespace Servicios.Colecciones.Enlazadas
         public bool agregar(Tipo prmItem)
         {
             bool agrego = false;
+            clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(prmItem);
+            if(atrPrimero == null)
+            {
+                atrPrimero = nodoNuevo;
+                atrUltimo = nodoNuevo;
+            }
+            else
+            {
+                atrUltimo.enlazarSiguiente(nodoNuevo);
+                atrUltimo = nodoNuevo;
+                
+            }
+            atrLongitud++;
+            agrego = actualizarAtrItems();
             return agrego;
         }
         public bool insertar(int prmIndice, Tipo prmItem)
@@ -98,22 +119,22 @@ namespace Servicios.Colecciones.Enlazadas
         public bool extraer(int prmIndice, ref Tipo prmItem)
         {
             bool extraer = false;
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
 
             if ((prmIndice >= 0) && (prmIndice < atrLongitud))
             {
-                if ((atrLongitud > 0) && (atrItems[prmIndice] != null))
+                if ((atrLongitud > 0))
                 {
-                    prmItem = atrItems[prmIndice];
-                    for (int i = prmIndice; i < (atrLongitud - 1); i++)
+                    if(prmIndice == 0)
                     {
-                        atrItems[i] = atrItems[i + 1];
+
                     }
                     extraer = true;
                     atrLongitud--;
                 }
 
             }
-
+            actualizarAtrItems();
             return extraer;
         }
         public bool modificar(int prmIndice, Tipo prmItem)
@@ -175,19 +196,46 @@ namespace Servicios.Colecciones.Enlazadas
                 return atrReversar;
             }
         }
+
+        public bool actualizarAtrItems() // revisar para items en borde
+        {
+            bool actualizar = false;
+            if (atrLongitud > int.MaxValue / 16)
+            {
+                atrLongitud--;
+                return actualizar;
+            }
+            atrItems = new Tipo[atrLongitud];
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
+            for (int i = 0; i < atrLongitud; i++)
+            {
+                atrItems[i] = nodoTemporal.darItem();
+                if (nodoTemporal.pasarItems() != null)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                }
+            }
+            actualizar = true;
+            return actualizar;
+        }
         #endregion
         #region QUERY
         public int encontrar(Tipo prmItem)
         {
             int atrIndice = -1;
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
             if (atrLongitud > 0)
             {
                 for (int i = 0; i < atrLongitud; i++)
                 {
-                    if (atrItems[i].Equals(prmItem))
+                    if (nodoTemporal.darItem().Equals(prmItem))
                     {
                         atrIndice = i;
                         break;
+                    }
+                    else
+                    {
+                        nodoTemporal = nodoTemporal.pasarItems();
                     }
                 }
             }
@@ -197,15 +245,19 @@ namespace Servicios.Colecciones.Enlazadas
         public bool contiene(Tipo prmItem)
         {
             bool contiene = false;
-
+            clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
             if (atrLongitud > 0)
             {
                 for (int i = 0; i < atrLongitud; i++)
                 {
-                    if (atrItems[i].Equals(prmItem))
+                    if (nodoTemporal.darItem().Equals(prmItem))
                     {
                         contiene = true;
                         break;
+                    }
+                    else
+                    {
+                        nodoTemporal = nodoTemporal.pasarItems();
                     }
                 }
             }

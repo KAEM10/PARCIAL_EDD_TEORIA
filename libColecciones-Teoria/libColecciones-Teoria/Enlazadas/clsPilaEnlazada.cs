@@ -68,20 +68,67 @@ namespace Servicios.Colecciones.Enlazadas
         public bool desapilar(ref Tipo prmItem)
         {
             bool desapilo = false;
-
+            if(atrLongitud > 0)
+            {
+                prmItem = atrPrimero.darItem();
+                atrPrimero = atrPrimero.pasarItems();
+                atrLongitud--;
+                desapilo = actualizarAtrItems();
+            }
+            else
+            {
+                prmItem = default(Tipo);
+            }
+            
             return desapilo;
         }
         public bool revisar(ref Tipo prmItem)
         {
             bool reviso = false;
-
+            if(atrLongitud > 0)
+            {
+                prmItem = atrPrimero.darItem();
+                reviso = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
+            }
             return reviso;
         }
         public bool reversar()
         {
-            bool reverso = false;
+            if (atrLongitud > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for (int i = atrLongitud - 1; i >= end; i--)
+                {
 
-            return reverso;
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                atrReversar = true;
+                atrPrimero = null;
+                atrUltimo = null;
+                ponerItems(atrItems);
+                return atrReversar;
+            }
+            else
+            {
+                return atrReversar;
+            }
         }
 
         public bool actualizarAtrItems() // revisar para items en borde
@@ -111,35 +158,46 @@ namespace Servicios.Colecciones.Enlazadas
         public bool ponerItems(Tipo[] prmItems) // revisar para items en borde
         {
             bool atrTest = true;
-            clsNodoEnlazado<Tipo> nodoTemporal;
+            
             atrItems = prmItems;
-            if (prmItems.Length == int.MaxValue / 16 + 1)
+            if (prmItems.Length == 0)
             {
                 atrTest = false;
-                atrItems = new Tipo[0];
             }
-            atrLongitud = atrItems.Length;
-
-            for (int i = atrItems.Length - 1; i >= 0; i--)
+            else if(prmItems.Length == int.MaxValue / 16)
             {
-                if (atrItems[i] != null) { 
-                    clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(atrItems[i]);
-                    nodoTemporal = atrPrimero;
-                    if (atrPrimero == null)
+                atrLongitud = atrItems.Length;
+                return atrTest;
+            }
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            {
+                atrLongitud = 0;
+                atrTest = false;
+                atrItems = new Tipo[0];
+                atrItems = default(Tipo[]);
+            }
+            else 
+            {
+                for (int i = atrItems.Length - 1; i >= 0; i--)
+                {
+                    if (atrItems[i] != null)
                     {
-                        atrPrimero = nodoNuevo;
-                        atrUltimo = nodoNuevo;
-                    }
-                    else
-                    {
-                        nodoNuevo.enlazarSiguiente(nodoTemporal);
-                        atrPrimero = nodoNuevo;
+                        clsNodoEnlazado<Tipo> nodoNuevo = new clsNodoEnlazado<Tipo>(atrItems[i]);
+                        
+                        if (atrPrimero == null)
+                        {
+                            atrPrimero = nodoNuevo;
+                            atrUltimo = nodoNuevo;
+                        }
+                        else
+                        {
+                            nodoNuevo.enlazarSiguiente(atrPrimero);
+                            atrPrimero = nodoNuevo;
+                        }
                     }
                 }
+                atrLongitud = atrItems.Length;
             }
-
-
-
             return atrTest;
         }
 
