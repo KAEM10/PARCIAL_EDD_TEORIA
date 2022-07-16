@@ -11,29 +11,26 @@ namespace Servicios.Colecciones.Nodos
         #endregion
         #endregion
         #region Constructor
-        public clsNodoDobleEnlazado()
+        public clsNodoDobleEnlazado(Tipo prmitem)
         {
-            atrItem = default(Tipo);
-            atrSiguiente = null;
+            this.atrSiguiente = null;
+            this.atrItem = prmitem;
         }
         #endregion
         #region Metodos
-        public Tipo darItem
+        public clsNodoDobleEnlazado<Tipo> pasarItems()
         {
-            get { return atrItem; }
-            set { atrItem = value; }
+            return atrSiguiente;
         }
 
-        public clsNodoDobleEnlazado<Tipo> darSiguiente
+        public void enlazarSiguiente(clsNodoDobleEnlazado<Tipo> nodoSiguiente)
         {
-            get { return atrSiguiente; }
-            set { atrSiguiente = value; }
+            atrSiguiente = nodoSiguiente;
         }
 
-        public clsNodoDobleEnlazado<Tipo> darAnterior
+        public void enlazarAnterior(clsNodoDobleEnlazado<Tipo> nodoAnterior)
         {
-            get { return atrAnterior; }
-            set { atrAnterior = value; }
+            atrAnterior = nodoAnterior;
         }
         #endregion
     }

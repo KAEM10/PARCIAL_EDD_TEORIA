@@ -47,6 +47,21 @@ namespace Servicios.Colecciones.Enlazadas
         public bool apilar(Tipo prmItem)
         {
             bool apilo = false;
+            clsNodoDobleEnlazado<Tipo> nodoNuevo = new clsNodoDobleEnlazado<Tipo>(prmItem);
+            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
+            if (atrPrimero == null)
+            {
+                atrPrimero = nodoNuevo;
+                atrUltimo = nodoNuevo;
+            }
+            else
+            {
+                nodoNuevo.enlazarSiguiente(nodoTemporal);
+                nodoNuevo.enlazarAnterior(atrUltimo);
+                atrPrimero = nodoNuevo;
+            }
+            atrLongitud++;
+            apilo = actualizarAtrItems();
             return apilo;
         }
         public bool desapilar(ref Tipo prmItem)
@@ -54,13 +69,14 @@ namespace Servicios.Colecciones.Enlazadas
             bool desapilo = false;
             if (atrLongitud > 0)
             {
-                prmItem = atrItems[0];
-                for (int i = 0; i < (atrLongitud - 1); i++)
-                {
-                    atrItems[i] = atrItems[i + 1];
-                }
-                desapilo = true;
+                prmItem = atrPrimero.darItem();
+                atrPrimero = atrPrimero.pasarItems();
                 atrLongitud--;
+                desapilo = actualizarAtrItems();
+            }
+            else
+            {
+                prmItem = default(Tipo);
             }
 
             return desapilo;
@@ -70,8 +86,12 @@ namespace Servicios.Colecciones.Enlazadas
             bool reviso = false;
             if (atrLongitud > 0)
             {
-                prmItem = atrItems[0];
+                prmItem = atrPrimero.darItem();
                 reviso = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
             }
             return reviso;
         }
@@ -99,7 +119,9 @@ namespace Servicios.Colecciones.Enlazadas
                     j++;
                 }
                 atrReversar = true;
-
+                atrPrimero = null;
+                atrUltimo = null;
+                ponerItems(atrItems);
                 return atrReversar;
             }
             else
@@ -107,45 +129,72 @@ namespace Servicios.Colecciones.Enlazadas
                 return atrReversar;
             }
         }
+        public bool actualizarAtrItems()
+        {
+            bool actualizar = false;
+            if (atrLongitud > int.MaxValue / 16)
+            {
+                atrLongitud--;
+                return actualizar;
+            }
+            atrItems = new Tipo[atrLongitud];
+            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
+            for (int i = 0; i < atrLongitud; i++)
+            {
+                atrItems[i] = nodoTemporal.darItem();
+                if (nodoTemporal.pasarItems() != null)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                }
+            }
+            actualizar = true;
+            return actualizar;
+        }
         #endregion
         #region Mutadores
         public bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
+
             atrItems = prmItems;
             if (prmItems.Length == 0)
             {
                 atrTest = false;
             }
-            else if (prmItems.Length == int.MaxValue/16)
+            else if (prmItems.Length == int.MaxValue / 16)
             {
                 atrLongitud = atrItems.Length;
+                return atrTest;
             }
-            else if (prmItems.Length == int.MaxValue / 16 +1)
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
             {
-                atrItems = null;
                 atrLongitud = 0;
                 atrTest = false;
+                atrItems = new Tipo[0];
+                atrItems = default(Tipo[]);
             }
             else
             {
-                atrLongitud = atrItems.Length;
-                for (int i = 0; i < atrItems.Length; i++)
+                for (int i = atrItems.Length - 1; i >= 0; i--)
                 {
-                    clsNodoDobleEnlazado<Tipo> NodoActual = new clsNodoDobleEnlazado<Tipo>();
-                    NodoActual.darItem = atrItems[i];
-                    if (atrPrimero == null)
+                    if (atrItems[i] != null)
                     {
-                        atrPrimero = NodoActual;
-                        atrUltimo = atrPrimero;
-                    }
-                    else
-                    {
-                        atrUltimo.darSiguiente = NodoActual;
-                        NodoActual.darAnterior = atrUltimo;
-                        atrUltimo = atrPrimero;
+                        clsNodoDobleEnlazado<Tipo> nodoNuevo = new clsNodoDobleEnlazado<Tipo>(atrItems[i]);
+
+                        if (atrPrimero == null)
+                        {
+                            atrPrimero = nodoNuevo;
+                            atrUltimo = nodoNuevo;
+                        }
+                        else
+                        {
+                            nodoNuevo.enlazarSiguiente(atrPrimero);
+                            nodoNuevo.enlazarAnterior(atrUltimo);
+                            atrPrimero = nodoNuevo;
+                        }
                     }
                 }
+                atrLongitud = atrItems.Length;
             }
             return atrTest;
         }

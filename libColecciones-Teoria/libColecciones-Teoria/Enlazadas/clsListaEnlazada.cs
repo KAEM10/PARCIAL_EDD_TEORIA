@@ -188,7 +188,9 @@ namespace Servicios.Colecciones.Enlazadas
                     j++;
                 }
                 atrReversar = true;
-
+                atrPrimero = null;
+                atrUltimo = null;
+                ponerItems(atrItems);
                 return atrReversar;
             }
             else
