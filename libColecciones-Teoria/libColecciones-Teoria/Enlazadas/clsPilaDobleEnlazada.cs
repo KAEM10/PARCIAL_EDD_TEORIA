@@ -57,7 +57,7 @@ namespace Servicios.Colecciones.Enlazadas
             else
             {
                 nodoNuevo.enlazarSiguiente(nodoTemporal);
-                nodoNuevo.enlazarAnterior(atrUltimo);
+                nodoTemporal.enlazarAnterior(nodoNuevo);
                 atrPrimero = nodoNuevo;
             }
             atrLongitud++;

@@ -120,7 +120,7 @@ namespace Servicios.Colecciones.Enlazadas
             else
             {
                 atrUltimo.enlazarSiguiente(nodoNuevo);
-                atrUltimo.enlazarAnterior(atrUltimo);
+                nodoNuevo.enlazarAnterior(atrUltimo);
                 atrUltimo = nodoNuevo;
             }
             atrLongitud++;

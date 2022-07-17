@@ -104,7 +104,7 @@ namespace Servicios.Colecciones.Enlazadas
             else
             {
                 atrUltimo.enlazarSiguiente(nodoNuevo);
-                atrUltimo.enlazarAnterior(atrUltimo);
+                nodoNuevo.enlazarAnterior(atrUltimo);
                 atrUltimo = nodoNuevo;
 
             }
@@ -115,54 +115,113 @@ namespace Servicios.Colecciones.Enlazadas
         public bool insertar(int prmIndice, Tipo prmItem)
         {
             bool inserto = false;
+            clsNodoDobleEnlazado<Tipo> nodoNuevo = new clsNodoDobleEnlazado<Tipo>(prmItem);
+            clsNodoDobleEnlazado<Tipo> nodoAuxiliar;
+
+            if (prmIndice >= 0 && prmIndice <= atrLongitud)
+            {
+                if (prmIndice == 0)
+                {
+                    if (atrPrimero == null)
+                    {
+                        atrUltimo = nodoNuevo;
+                    }
+                    nodoNuevo.enlazarSiguiente(atrPrimero);
+                    //atrPrimero.enlazarAnterior(nodoNuevo);
+                    atrPrimero = nodoNuevo;
+                }
+                else if (prmIndice == atrLongitud)
+                {
+                    atrUltimo.enlazarSiguiente(nodoNuevo);
+                    //nodoNuevo.enlazarAnterior(atrUltimo);
+                    atrUltimo = nodoNuevo;
+                }
+                else
+                {
+                    clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
+
+                    for (int i = 0; i < prmIndice - 1; i++)
+                    {
+                        nodoTemporal = nodoTemporal.pasarItems();
+                    }
+
+                    nodoAuxiliar = nodoTemporal.pasarItems();
+                    nodoTemporal.enlazarSiguiente(nodoNuevo);
+                    nodoNuevo.enlazarSiguiente(nodoAuxiliar);
+
+                }
+                atrLongitud++;
+                inserto = actualizarAtrItems();
+            }
             return inserto;
         }
         public bool extraer(int prmIndice, ref Tipo prmItem)
         {
             bool extraer = false;
-
+            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
             if ((prmIndice >= 0) && (prmIndice < atrLongitud))
             {
-                if ((atrLongitud > 0) && (atrItems[prmIndice] != null))
+                if ((atrLongitud > 0))
                 {
-                    prmItem = atrItems[prmIndice];
-                    for (int i = prmIndice; i < (atrLongitud - 1); i++)
+                    if (prmIndice == 0)
                     {
-                        atrItems[i] = atrItems[i + 1];
+                        prmItem = atrPrimero.darItem();
+                        atrPrimero = atrPrimero.pasarItems();
                     }
-                    extraer = true;
+                    else
+                    {
+                        for (int i = 0; i < prmIndice - 1; i++)
+                        {
+                            nodoTemporal = nodoTemporal.pasarItems();
+                            prmItem = nodoTemporal.pasarItems().darItem();
+                        }
+
+                        if (nodoTemporal.pasarItems().pasarItems() == null)
+                        {
+                            nodoTemporal.enlazarSiguiente(null);
+                            atrUltimo = nodoTemporal;
+                        }
+                        else
+                        {
+                            nodoTemporal.enlazarSiguiente(nodoTemporal.pasarItems().pasarItems());
+                        }
+                    }
                     atrLongitud--;
+                    extraer = actualizarAtrItems();
                 }
-
             }
-
             return extraer;
         }
         public bool modificar(int prmIndice, Tipo prmItem)
         {
             bool modifico = false;
-            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
+            if (atrLongitud > 0 && prmIndice < atrLongitud && prmIndice >= 0)
             {
-                atrItems[prmIndice] = prmItem;
-                modifico = true;
-            }
+                clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
 
+                for (int i = 0; i < prmIndice; i++)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                }
+                nodoTemporal.ponerItem(prmItem);
+                modifico = actualizarAtrItems();
+            }
             return modifico;
         }
         public bool recuperar(int prmIndice, ref Tipo prmItem)
         {
             bool recupero = false;
-            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
+            if (atrLongitud > 0 && prmIndice < atrLongitud && prmIndice >= 0)
             {
-                prmItem = atrItems[prmIndice];
-                recupero = true;
+                clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
+                prmItem = nodoTemporal.darItem();
+                for (int i = 0; i < prmIndice; i++)
+                {
+                    nodoTemporal = nodoTemporal.pasarItems();
+                    prmItem = nodoTemporal.darItem();
+                }
+                recupero = actualizarAtrItems();
             }
-            else
-            {
-                prmItem = default(Tipo);
-            }
-
-
             return recupero;
         }
         public bool reversar()
@@ -189,7 +248,9 @@ namespace Servicios.Colecciones.Enlazadas
                     j++;
                 }
                 atrReversar = true;
-
+                atrPrimero = null;
+                atrUltimo = null;
+                ponerItems(atrItems);
                 return atrReversar;
             }
             else
