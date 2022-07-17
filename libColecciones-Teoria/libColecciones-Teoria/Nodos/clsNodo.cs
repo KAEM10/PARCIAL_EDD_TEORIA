@@ -13,5 +13,9 @@ namespace Servicios.Colecciones.Nodos
         {
             return atrItem;
         }
+        public void ponerItem(Tipo prmItem)
+        {
+            atrItem = prmItem; 
+        }
     }
 }
