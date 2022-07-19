@@ -13,7 +13,6 @@ namespace Servicios.Colecciones.Enlazadas
         #endregion
         private Tipo[] atrItems;
         private int atrLongitud;
-        private bool atrReversar;
         #endregion
         #region Metodos
         #region Accesores
@@ -142,6 +141,7 @@ namespace Servicios.Colecciones.Enlazadas
         }
         public bool reversar()
         {
+            bool atrReversar = false;
             if (atrLongitud > 0)
             {
                 Tipo aux;

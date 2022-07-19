@@ -13,7 +13,6 @@ namespace Servicios.Colecciones.Enlazadas
         #endregion
         private Tipo[] atrItems;
         private int atrLongitud;
-        private bool atrReversar;
         #endregion
         #region Metodos
         #region Accesores
@@ -122,18 +121,22 @@ namespace Servicios.Colecciones.Enlazadas
             {
                 if (prmIndice == 0)
                 {
-                    if (atrPrimero == null)
+                    if (atrLongitud == 0)
                     {
+                        atrPrimero = nodoNuevo;
                         atrUltimo = nodoNuevo;
                     }
-                    nodoNuevo.enlazarSiguiente(atrPrimero);
-                    //atrPrimero.enlazarAnterior(nodoNuevo);
-                    atrPrimero = nodoNuevo;
+                    else
+                    {
+                        atrPrimero.enlazarAnterior(nodoNuevo);
+                        nodoNuevo.enlazarSiguiente(atrPrimero);
+                        atrPrimero = nodoNuevo;
+                    }
                 }
                 else if (prmIndice == atrLongitud)
                 {
+                    nodoNuevo.enlazarAnterior(atrUltimo);
                     atrUltimo.enlazarSiguiente(nodoNuevo);
-                    //nodoNuevo.enlazarAnterior(atrUltimo);
                     atrUltimo = nodoNuevo;
                 }
                 else
@@ -147,7 +150,10 @@ namespace Servicios.Colecciones.Enlazadas
 
                     nodoAuxiliar = nodoTemporal.pasarItems();
                     nodoTemporal.enlazarSiguiente(nodoNuevo);
+                    nodoNuevo.enlazarAnterior(nodoTemporal);
+
                     nodoNuevo.enlazarSiguiente(nodoAuxiliar);
+                    nodoAuxiliar.enlazarSiguiente(nodoNuevo);
 
                 }
                 atrLongitud++;
@@ -228,6 +234,7 @@ namespace Servicios.Colecciones.Enlazadas
         }
         public bool reversar()
         {
+            bool atrReversar = false;
             if (atrLongitud > 0)
             {
                 Tipo aux;

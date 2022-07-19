@@ -13,7 +13,6 @@ namespace Servicios.Colecciones.Enlazadas
         #endregion
         private Tipo[] atrItems;
         private int atrLongitud;
-        private bool atrReversar;
         #endregion
         #region Metodos
         #region Accesores
@@ -57,7 +56,7 @@ namespace Servicios.Colecciones.Enlazadas
             else
             {
                 nodoNuevo.enlazarSiguiente(nodoTemporal);
-                nodoTemporal.enlazarAnterior(nodoNuevo);
+                atrPrimero.enlazarAnterior(nodoNuevo);
                 atrPrimero = nodoNuevo;
             }
             atrLongitud++;
@@ -97,6 +96,7 @@ namespace Servicios.Colecciones.Enlazadas
         }
         public bool reversar()
         {
+            bool atrReversar = false;
             if (atrLongitud > 0)
             {
                 Tipo aux;
@@ -189,7 +189,7 @@ namespace Servicios.Colecciones.Enlazadas
                         else
                         {
                             nodoNuevo.enlazarSiguiente(atrPrimero);
-                            nodoNuevo.enlazarAnterior(atrUltimo);
+                            atrPrimero.enlazarAnterior(nodoNuevo);
                             atrPrimero = nodoNuevo;
                         }
                     }

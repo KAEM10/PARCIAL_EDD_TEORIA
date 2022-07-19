@@ -141,7 +141,6 @@ namespace uTestDemoColecciones
             testItems[1] = 456;
             testItems[2] = 123;
             testTAD.ponerItems(testItems);
-
             testItems = new int[4];
             testItems[0] = 789;
             testItems[1] = 456;
