@@ -150,11 +150,11 @@ namespace Servicios.Colecciones.Enlazadas
 
                     nodoAuxiliar = nodoTemporal.pasarItems();
                     nodoTemporal.enlazarSiguiente(nodoNuevo);
+                    nodoAuxiliar.enlazarAnterior(nodoNuevo);
+                    nodoNuevo.enlazarSiguiente(nodoAuxiliar);
                     nodoNuevo.enlazarAnterior(nodoTemporal);
 
-                    nodoNuevo.enlazarSiguiente(nodoAuxiliar);
-                    nodoAuxiliar.enlazarSiguiente(nodoNuevo);
-
+                    
                 }
                 atrLongitud++;
                 inserto = actualizarAtrItems();
@@ -186,6 +186,7 @@ namespace Servicios.Colecciones.Enlazadas
                         if (nodoTemporal.pasarItems().pasarItems() == null)
                         {
                             nodoTemporal.enlazarSiguiente(null);
+                            nodoTemporal.enlazarAnterior(atrUltimo);
                             atrUltimo = nodoTemporal;
                         }
                         else

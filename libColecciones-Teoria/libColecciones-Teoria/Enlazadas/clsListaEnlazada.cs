@@ -136,8 +136,8 @@ namespace Servicios.Colecciones.Enlazadas
                 else
                 {
                     clsNodoEnlazado<Tipo> nodoTemporal = atrPrimero;
-                    
-                    for (int i = 0; i < prmIndice-1; i++)
+
+                    for (int i = 0; i < prmIndice - 1; i++)
                     {
                         nodoTemporal = nodoTemporal.pasarItems();
                     }
@@ -145,7 +145,7 @@ namespace Servicios.Colecciones.Enlazadas
                     nodoAuxiliar = nodoTemporal.pasarItems();
                     nodoTemporal.enlazarSiguiente(nodoNuevo);
                     nodoNuevo.enlazarSiguiente(nodoAuxiliar);
-
+                    
                 }
                 atrLongitud++;
                 inserto = actualizarAtrItems();
