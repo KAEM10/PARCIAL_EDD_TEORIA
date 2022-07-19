@@ -81,7 +81,7 @@ namespace Servicios.Colecciones.Enlazadas
                         else
                         {
                             nodoNuevo.enlazarSiguiente(atrPrimero);
-                            nodoNuevo.enlazarAnterior(atrUltimo);
+                            atrPrimero.enlazarAnterior(nodoNuevo);
                             atrPrimero = nodoNuevo;
                         }
                     }
@@ -167,6 +167,7 @@ namespace Servicios.Colecciones.Enlazadas
                     {
                         prmItem = atrPrimero.darItem();
                         atrPrimero = atrPrimero.pasarItems();
+                        atrPrimero.enlazarAnterior(null);
                     }
                     else
                     {
@@ -183,6 +184,7 @@ namespace Servicios.Colecciones.Enlazadas
                         }
                         else
                         {
+                            nodoTemporal.pasarItems().pasarItems().enlazarAnterior(nodoTemporal);
                             nodoTemporal.enlazarSiguiente(nodoTemporal.pasarItems().pasarItems());
                         }
                     }
