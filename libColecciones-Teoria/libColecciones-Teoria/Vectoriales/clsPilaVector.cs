@@ -42,7 +42,7 @@ namespace Servicios.Colecciones.Vectoriales
         #region Constructores
         public clsPilaVector()
         {
-            testItems = new int[0];
+            //testItems = new int[0];
             if (atrCapacidad == 0)
             {
                 atrItems = new Tipo[atrCapacidad];
@@ -385,6 +385,32 @@ namespace Servicios.Colecciones.Vectoriales
             }
 
             return atrAjustarFC;
+        }
+        #endregion
+        #region Ordenamiento
+        public bool OrdenarBurbujaSimple(bool prmOrden)
+        {
+            return false;
+        }
+        public bool OrdenarBurbujaMejorado(bool prmOrden)
+        {
+            return false;
+        }
+        public bool OrdenarBurbujaBiDireccional(bool prmOrden)
+        {
+            return false;
+        }
+        public bool OrdenarInsercion(bool prmOrden)
+        {
+            return false;
+        }
+        public bool OrdenarQuickSort(bool prmOrden)
+        {
+            return false;
+        }
+        public bool OrdenarSeleccion(bool prmOrden)
+        {
+            return false;
         }
         #endregion
         #endregion

@@ -55,6 +55,7 @@
     <Compile Include="Colecciones\Pruebas\uTestListaDobleEnlazada.cs" />
     <Compile Include="Colecciones\Pruebas\uTestListaEnlazada.cs" />
     <Compile Include="Colecciones\Pruebas\uTestListaVector.cs" />
+    <Compile Include="Colecciones\Pruebas\uTestOrdenamiento.cs" />
     <Compile Include="Colecciones\Pruebas\uTestPilaDobleEnlazada.cs" />
     <Compile Include="Colecciones\Pruebas\uTestPilaEnlazada.cs" />
     <Compile Include="Colecciones\Pruebas\uTestPilaVector.cs" />
@@ -64,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libColecciones-Teoria\libColecciones-Teoria.csproj">
-      <Project>{c0e6abd9-c42d-4f7e-90e3-56f37f3c2aa0}</Project>
-      <Name>libColecciones-Teoria</Name>
+    <ProjectReference Include="..\libColecciones-Teoria\Rodallega - Eraso - Arroyo.csproj">
+      <Project>{4ff2f5dd-346c-496e-acbf-b8cdc3863a61}</Project>
+      <Name>Rodallega - Eraso - Arroyo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
