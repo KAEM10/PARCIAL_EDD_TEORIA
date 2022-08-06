@@ -4,50 +4,17 @@ using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Vectoriales
 {
-    public class clsColaVector<Tipo> : clsTAD<Tipo>, iCola<Tipo> where Tipo : IComparable<Tipo>
+    public class clsColaVector<Tipo> : clsTADVectorial<Tipo>, iCola<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         private Tipo[] atrItems;
-        private int atrCapacidad = 0;
-        private int atrLongitud;
+        private int atrCapacidad = 0, atrLongitud, atrFactorCrecimiento = 1000;
         private bool atrDinamica = true;
-        private int atrFactorCrecimiento = 1000;
-        private bool atrAjustarFC;
-        private bool atrFlexibilidad;
-        private bool atrReversar;
         private int[] testItems;
         #endregion
         #region Metodos
         #region Accesores
-        public Tipo[] darItems() //metodo para accceder al arreglo
-        {
-            return atrItems;
-        }
-        public int darCapacidad() //metodo para acceder a la capacidad
-        {
-            return atrCapacidad;
-        }
-        public int darLongitud() //metodo para acceder a la longitud
-        {
-            return atrLongitud;
-        }
-        public bool esFlexible()// metodo para saber si es flexible
-        {
-            return atrDinamica;
-        }
-        public int darFactorCrecimiento() // metodo para acceder a el factorcrecimiento
-        {
-            return atrFactorCrecimiento;
-        }
         public bool ponerCapacidad(int prmValor)
-        {
-            throw new NotImplementedException();
-        }
-        public bool ponerFactorCrecimiento(int prmValor)
-        {
-            throw new NotImplementedException();
-        }
-        public bool ponerItems(Tipo prmVector)
         {
             throw new NotImplementedException();
         }
@@ -243,68 +210,6 @@ namespace Servicios.Colecciones.Vectoriales
             }
         }
         #endregion
-        #region Mutadores
-        public bool ponerItems(Tipo[] prmItems)
-        {
-            bool atrTest = true;
-            atrItems = prmItems;
-            if (prmItems.Length == int.MaxValue / 16)
-            {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
-                atrFactorCrecimiento = 0;
-                atrDinamica = false;
-            }
-            else if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrCapacidad = 0;
-                atrLongitud = 0;
-                atrTest = false;
-                atrItems = new Tipo[0];
-            }
-            atrCapacidad = atrItems.Length;
-            atrLongitud = atrItems.Length;
-            return atrTest;
-        }
-        public bool ajustarFlexibilidad(bool prmFlexibilidad)
-        {
-            if (prmFlexibilidad == false && atrCapacidad > 0)
-            {
-                atrFlexibilidad = true;
-                atrDinamica = false;
-                atrFactorCrecimiento = 0;
-            }
-            else if (prmFlexibilidad == false && atrCapacidad == 0)
-            {
-                atrFlexibilidad = false;
-            }
-            else
-            {
-                atrFlexibilidad = false;
-            }
-            return atrFlexibilidad;
-        }
-        public bool ajustarFactorCrecimiento(int prmFactorCre)
-        {
-            if (prmFactorCre == int.MaxValue / 16 - atrItems.Length)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
-            else if (prmFactorCre == int.MaxValue / 16)
-            {
-                atrFactorCrecimiento = 0;
-                atrAjustarFC = false;
-            }
-            else if (prmFactorCre > 0)
-            {
-                atrFactorCrecimiento = prmFactorCre;
-                atrAjustarFC = true;
-            }
-
-            return atrAjustarFC;
-        }
-        #endregion
         #region CRUD
         public bool desencolar(ref Tipo prmItem)
         {
@@ -379,40 +284,6 @@ namespace Servicios.Colecciones.Vectoriales
         public bool contiene(Tipo prmItem)
         {
             throw new NotImplementedException();
-        }
-        #endregion
-        #region Sorting
-        public bool reversar()
-        {
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
-
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
         }
         #endregion
         #endregion

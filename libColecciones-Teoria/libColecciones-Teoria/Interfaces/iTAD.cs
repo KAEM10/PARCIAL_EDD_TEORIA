@@ -10,7 +10,7 @@ namespace Servicios.Colecciones.Interfaces
         #endregion
 
         #region Setters
-        bool ponerItems(Tipo prmVector);
+        bool ponerItems(Tipo[] prmItems);
         #endregion
 
         #region Sorting

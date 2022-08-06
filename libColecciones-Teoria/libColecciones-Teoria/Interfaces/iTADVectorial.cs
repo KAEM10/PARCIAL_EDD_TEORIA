@@ -2,7 +2,7 @@
 
 namespace Servicios.Colecciones.Interfaces
 {
-    public interface iTADVectorial<Tipo> :iTAD<Tipo> where Tipo : IComparable<Tipo>
+    public interface iTADVectorial<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Getters
         int darFactorCrecimiento();
@@ -12,7 +12,7 @@ namespace Servicios.Colecciones.Interfaces
         #region Setters
         bool ponerCapacidad(int prmValor);
         bool ponerFactorCrecimiento(int prmValor);
-        bool ajustarFlexibilidad(bool prmValor);
+        bool ajustarFlexibilidad(bool prmFlexibilidad);
         #endregion
 
         #region QUERY
