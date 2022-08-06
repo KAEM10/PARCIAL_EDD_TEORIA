@@ -6,13 +6,116 @@ namespace Servicios.Colecciones.Vectoriales
 {
     public class clsColaVector<Tipo> : clsTADVectorial<Tipo>, iCola<Tipo> where Tipo : IComparable<Tipo>
     {
-        #region Atributos
-        private Tipo[] atrItems;
-        private int atrCapacidad = 0, atrLongitud, atrFactorCrecimiento = 1000;
-        private bool atrDinamica = true;
-        private int[] testItems;
-        #endregion
         #region Metodos
+        #region Accesores
+        public override int darLongitud()
+        {
+            return atrLongitud;
+        }
+        public override bool estaVacia()
+        {
+            throw new NotImplementedException();
+        }
+        public override Tipo[] darItems()
+        {
+            return atrItems;
+        }
+        public override int darCapacidad()
+        {
+            return atrCapacidad;
+        }
+        public override int darFactorCrecimiento()
+        {
+            return atrFactorCrecimiento;
+        }
+        public override bool esFlexible()
+        {
+            return atrFlexible;
+        }
+        #endregion
+        #region Mutadores
+        public override bool ponerItems(Tipo[] prmItems)
+        {
+            bool atrTest = true;
+            atrItems = prmItems;
+            if (prmItems.Length == int.MaxValue / 16)
+            {
+                atrCapacidad = atrItems.Length;
+                atrLongitud = atrItems.Length;
+                atrFactorCrecimiento = 0;
+                atrFlexible = false;
+            }
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            {
+                atrLongitud = 0;
+                atrTest = false;
+                atrItems = new Tipo[0];
+            }
+            atrCapacidad = atrItems.Length;
+            atrLongitud = atrItems.Length;
+            return atrTest;
+        }
+        public override bool ajustarFlexibilidad(bool prmFlexibilidad)
+        {
+            if (prmFlexibilidad == false && atrCapacidad > 0)
+            {
+                atrFlexibilidad = true;
+                atrFlexible = false;
+                atrFactorCrecimiento = 0;
+            }
+            else if (prmFlexibilidad == false && atrCapacidad == 0)
+            {
+                atrFlexibilidad = false;
+            }
+            else
+            {
+                atrFlexibilidad = false;
+            }
+            return atrFlexibilidad;
+        }
+        public override bool ponerCapacidad(int prmValor)
+        {
+            throw new NotImplementedException();
+        }
+        public override bool ponerFactorCrecimiento(int prmFactorCre)
+        {
+            if (prmFactorCre == int.MaxValue / 16 - atrItems.Length)
+            {
+                atrFactorCrecimiento = prmFactorCre;
+                atrAjustarFC = true;
+            }
+            else if (prmFactorCre == int.MaxValue / 16)
+            {
+                atrFactorCrecimiento = 0;
+                atrAjustarFC = false;
+            }
+            else if (prmFactorCre > 0)
+            {
+                atrFactorCrecimiento = prmFactorCre;
+                atrAjustarFC = true;
+            }
+            return atrAjustarFC;
+        }
+        public bool ajustarFactorCrecimiento(int prmFactorCre)
+        {
+            if (prmFactorCre == int.MaxValue / 16 - atrItems.Length)
+            {
+                atrFactorCrecimiento = prmFactorCre;
+                atrAjustarFC = true;
+            }
+            else if (prmFactorCre == int.MaxValue / 16)
+            {
+                atrFactorCrecimiento = 0;
+                atrAjustarFC = false;
+            }
+            else if (prmFactorCre > 0)
+            {
+                atrFactorCrecimiento = prmFactorCre;
+                atrAjustarFC = true;
+            }
+            return atrAjustarFC;
+        }
+        #endregion
         #region Constructores
         public clsColaVector()
         {
@@ -33,7 +136,7 @@ namespace Servicios.Colecciones.Vectoriales
                 atrCapacidad = int.MaxValue / 16;
                 atrItems = new Tipo[int.MaxValue / 16];
                 atrFactorCrecimiento = 0;
-                atrDinamica = false;
+                atrFlexible = false;
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1)
             {
@@ -80,7 +183,7 @@ namespace Servicios.Colecciones.Vectoriales
             {
                 atrCapacidad = prmCapacidad;
                 atrFactorCrecimiento = 0;
-                atrDinamica = false;
+                atrFlexible = false;
                 atrItems = new Tipo[atrCapacidad];
             }
             else
@@ -123,7 +226,7 @@ namespace Servicios.Colecciones.Vectoriales
             {
                 atrCapacidad = int.MaxValue / 16;
                 atrFactorCrecimiento = 0;
-                atrDinamica = false;
+                atrFlexible = false;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 && prmFactor > 0)
@@ -144,7 +247,7 @@ namespace Servicios.Colecciones.Vectoriales
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmFactor > 0)
             {
-                atrDinamica = true;
+                atrFlexible = true;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad == int.MaxValue / 16 + 1 && prmFactor == int.MaxValue / 16 + 1)
@@ -184,7 +287,7 @@ namespace Servicios.Colecciones.Vectoriales
             {
                 atrCapacidad = 500;
                 atrFactorCrecimiento = 0;
-                atrDinamica = false;
+                atrFlexible = false;
                 atrItems = new Tipo[atrCapacidad];
             }
             else if (prmCapacidad > 0 && prmFactor > 0)
@@ -234,7 +337,7 @@ namespace Servicios.Colecciones.Vectoriales
                 atrCapacidad = atrFactorCrecimiento;
                 atrItems = new Tipo[atrCapacidad];
             }
-            if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrDinamica)
+            if ((atrCapacidad != int.MaxValue / 16) && (atrCapacidad == atrLongitud) && atrFlexible)
             {
                 Tipo[] atrItemsAux = new Tipo[atrFactorCrecimiento + atrCapacidad];
                 Array.Copy(atrItems, atrItemsAux, atrItems.Length);
@@ -264,9 +367,75 @@ namespace Servicios.Colecciones.Vectoriales
             }
             return reviso;
         }
-        public bool limpiar()
+        public override bool limpiar()
         {
             throw new NotImplementedException();
+        }
+        #endregion
+        #region QUERY
+        public override int encontrar(Tipo prmItem)
+        {
+            int atrIndice = -1;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        atrIndice = i;
+                        break;
+                    }
+                }
+            }
+            return atrIndice;
+        }
+        public override bool contiene(Tipo prmItem)
+        {
+            bool contiene = false;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        contiene = true;
+                        break;
+                    }
+                }
+            }
+            return contiene;
+        }
+        #endregion
+        #region Sorting
+        public override bool reversar()
+        {
+            if (atrLongitud > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for (int i = atrLongitud - 1; i >= end; i--)
+                {
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                atrReversar = true;
+                return atrReversar;
+            }
+            else
+            {
+                return atrReversar;
+            }
         }
         #endregion
         #endregion

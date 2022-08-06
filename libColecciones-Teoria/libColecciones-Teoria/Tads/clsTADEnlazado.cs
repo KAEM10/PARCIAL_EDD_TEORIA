@@ -7,17 +7,17 @@ namespace Servicios.Colecciones.Tads
     public class clsTADEnlazado<Tipo>:clsTAD<Tipo>,iTADEnlazado<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
-        private clsNodoEnlazado<Tipo> atrPrimero;
-        private clsNodoEnlazado<Tipo> atrUltimo;
+        protected clsNodoEnlazado<Tipo> atrPrimero;
+        protected clsNodoEnlazado<Tipo> atrUltimo;
         #endregion
         #region Metodos
-        public clsNodoEnlazado<Tipo> darPrimero()
+        public virtual clsNodoEnlazado<Tipo> darPrimero()
         {
-            return atrPrimero;
+            throw new NotImplementedException();
         }
-        public clsNodoEnlazado<Tipo> darUltimo()
+        public virtual clsNodoEnlazado<Tipo> darUltimo()
         {
-            return atrUltimo;
+            throw new NotImplementedException();
         }
         #endregion
     }

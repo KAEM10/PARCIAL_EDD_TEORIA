@@ -8,14 +8,32 @@ namespace Servicios.Colecciones.Enlazadas
     public class clsColaDobleEnlazada<Tipo> : clsTADDobleEnlazado<Tipo>, iCola<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
-        #region Asociativo
-        private clsNodoDobleEnlazado<Tipo> atrPrimero;
-        private clsNodoDobleEnlazado<Tipo> atrUltimo;
-        #endregion
         private Tipo[] atrItems;
-        private int atrLongitud;
+        private bool atrReversar;
         #endregion
         #region Metodos
+        #region accesores
+        public override int darLongitud()
+        {
+            return atrLongitud;
+        }
+        public override bool estaVacia()
+        {
+            throw new NotImplementedException();
+        }
+        public override Tipo[] darItems()
+        {
+            return atrItems;
+        }
+        public override clsNodoDobleEnlazado<Tipo> darPrimero()
+        {
+            return atrPrimero;
+        }
+        public override clsNodoDobleEnlazado<Tipo> darUltimo()
+        {
+            return atrUltimo;
+        }
+        #endregion
         #region Constructores
         public clsColaDobleEnlazada()
         {
@@ -26,7 +44,7 @@ namespace Servicios.Colecciones.Enlazadas
         }
         #endregion
         #region Mutadores
-        public bool ponerItems(Tipo[] prmItems)
+        public override bool ponerItems(Tipo[] prmItems)
         {
             bool atrTest = true;
 
@@ -143,6 +161,38 @@ namespace Servicios.Colecciones.Enlazadas
             }
             actualizar = true;
             return actualizar;
+        }
+        #endregion
+        #region Sorting
+        public override bool reversar()
+        {
+            if (atrLongitud > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for (int i = atrLongitud - 1; i >= end; i--)
+                {
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                atrReversar = true;
+                return atrReversar;
+            }
+            else
+            {
+                return atrReversar;
+            }
         }
         #endregion
         #endregion

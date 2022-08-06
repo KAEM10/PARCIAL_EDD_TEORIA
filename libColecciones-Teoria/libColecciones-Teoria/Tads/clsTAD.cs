@@ -6,114 +6,45 @@ namespace Servicios.Colecciones.Tads
     public class clsTAD<Tipo> : iTAD<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
-        private Tipo[] atrItems;
-        private int atrLongitud, atrCapacidad, atrFactorCrecimiento = 0;
-        private bool atrFlexible, atrReversar;
+        protected int atrLongitud;
         #endregion
         #region Metodos
         #region Accesores
-        public int darLongitud()
-        {
-            return atrLongitud;
-        }
-        public bool estaVacia()
+        public virtual int darLongitud()
         {
             throw new NotImplementedException();
         }
-        public Tipo[] darItems()
+        public virtual bool estaVacia()
         {
-            return atrItems;
+            throw new NotImplementedException();
         }
-        public bool ponerItems(Tipo[] prmItems)
+        public virtual Tipo[] darItems()
         {
-            bool atrTest = true;
-            atrItems = prmItems;
-            if (prmItems.Length == int.MaxValue / 16)
-            {
-                atrCapacidad = atrItems.Length;
-                atrLongitud = atrItems.Length;
-                atrFactorCrecimiento = 0;
-                atrFlexible = false;
-            }
-            else if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrLongitud = 0;
-                atrTest = false;
-                atrItems = new Tipo[0];
-            }
-            atrCapacidad = atrItems.Length;
-            atrLongitud = atrItems.Length;
-            return atrTest;
+            throw new NotImplementedException();
+        }
+        public virtual bool ponerItems(Tipo[] prmItems)
+        {
+            throw new NotImplementedException();
         }
         #endregion
         #region QUERY
-        public int encontrar(Tipo prmItem)
+        public virtual int encontrar(Tipo prmItem)
         {
-            int atrIndice = -1;
-            if (atrLongitud > 0)
-            {
-                for (int i = 0; i < atrLongitud; i++)
-                {
-                    if (atrItems[i].Equals(prmItem))
-                    {
-                        atrIndice = i;
-                        break;
-                    }
-                }
-            }
-            return atrIndice;
+            throw new NotImplementedException();
         }
-        public bool contiene(Tipo prmItem)
+        public virtual bool contiene(Tipo prmItem)
         {
-            bool contiene = false;
-            if (atrLongitud > 0)
-            {
-                for (int i = 0; i < atrLongitud; i++)
-                {
-                    if (atrItems[i].Equals(prmItem))
-                    {
-                        contiene = true;
-                        break;
-                    }
-                }
-            }
-            return contiene;
+            throw new NotImplementedException();
         }
         #endregion
         #region Sorting
-        public bool reversar()
+        public virtual bool reversar()
         {
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
+            throw new NotImplementedException();
         }
         #endregion
         #region CRUDs
-        public bool limpiar()
+        public virtual bool limpiar()
         {
             throw new NotImplementedException();
         }
