@@ -13,12 +13,6 @@ namespace Servicios.Colecciones.Vectoriales
         private int[] testItems;
         #endregion
         #region Metodos
-        #region Accesores
-        public bool ponerCapacidad(int prmValor)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
         #region Constructores
         public clsColaVector()
         {
@@ -271,17 +265,6 @@ namespace Servicios.Colecciones.Vectoriales
             return reviso;
         }
         public bool limpiar()
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
-        #region QUERY
-        public int encontrar(Tipo prmItem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool contiene(Tipo prmItem)
         {
             throw new NotImplementedException();
         }

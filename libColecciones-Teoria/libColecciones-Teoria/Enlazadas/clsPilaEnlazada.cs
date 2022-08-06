@@ -16,24 +16,6 @@ namespace Servicios.Colecciones.Enlazadas
         private int atrLongitud;
         #endregion
         #region Metodos
-        #region Accesores
-        public Tipo[] darItems()
-        {
-            return atrItems;
-        }
-        public int darLongitud()
-        {
-            return atrLongitud;
-        }
-        public clsNodoEnlazado<Tipo> darPrimero()
-        {
-            return atrPrimero;
-        }
-        public clsNodoEnlazado<Tipo> darUltimo()
-        {
-            return atrUltimo;
-        }
-        #endregion
         #region Constructores
         public clsPilaEnlazada()
         {
@@ -96,42 +78,6 @@ namespace Servicios.Colecciones.Enlazadas
             }
             return reviso;
         }
-        public bool reversar()
-        {
-            bool atrReversar = false;
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
-
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-                atrPrimero = null;
-                atrUltimo = null;
-                ponerItems(atrItems);
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
-        }
-
         public bool actualizarAtrItems() // revisar para items en borde
         {
             bool actualizar = false;
@@ -155,7 +101,6 @@ namespace Servicios.Colecciones.Enlazadas
         }
         #endregion
         #region Mutadores
-
         public bool ponerItems(Tipo[] prmItems) // revisar para items en borde
         {
             bool atrTest = true;
@@ -201,7 +146,6 @@ namespace Servicios.Colecciones.Enlazadas
             }
             return atrTest;
         }
-
         #endregion
         #endregion
     }

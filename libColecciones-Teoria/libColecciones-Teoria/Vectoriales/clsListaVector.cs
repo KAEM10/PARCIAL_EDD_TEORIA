@@ -9,16 +9,10 @@ namespace Servicios.Colecciones.Vectoriales
         #region Atributos
         private Tipo[] atrItems;
         private int atrCapacidad = 0, atrLongitud, atrFactorCrecimiento = 1000;
-        private bool atrDinamica = true, atrAjustarFC;
+        private bool atrDinamica = true;
         private int[] testItems;
         #endregion
         #region Metodos
-        #region Accesores
-        public bool ponerCapacidad(int prmValor)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
         #region Constructores
         public clsListaVector()
         {
@@ -312,47 +306,6 @@ namespace Servicios.Colecciones.Vectoriales
 
 
             return recupero;
-        }
-        public bool limpiar()
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
-        #region QUERY
-        public int encontrar(Tipo prmItem)
-        {
-            int atrIndice = -1;
-            if (atrLongitud > 0)
-            {
-                for (int i = 0; i < atrLongitud; i++)
-                {
-                    if (atrItems[i].Equals(prmItem))
-                    {
-                        atrIndice = i;
-                        break;
-                    }
-                }
-            }
-
-            return atrIndice;
-        }
-        public bool contiene(Tipo prmItem)
-        {
-            bool contiene = false;
-
-            if (atrLongitud > 0)
-            {
-                for (int i = 0; i < atrLongitud; i++)
-                {
-                    if (atrItems[i].Equals(prmItem))
-                    {
-                        contiene = true;
-                        break;
-                    }
-                }
-            }
-
-            return contiene;
         }
         #endregion
         #endregion

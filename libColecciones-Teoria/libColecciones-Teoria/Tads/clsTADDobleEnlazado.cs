@@ -12,11 +12,11 @@ namespace Servicios.Colecciones.Tads
         #region Metodos
         public clsNodoDobleEnlazado<Tipo> darPrimero()
         {
-            throw new NotImplementedException();
+            return atrPrimero;
         }
         public clsNodoDobleEnlazado<Tipo> darUltimo()
         {
-            throw new NotImplementedException();
+            return atrUltimo;
         }
         #endregion
     }

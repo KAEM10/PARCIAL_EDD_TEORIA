@@ -8,19 +8,15 @@ namespace Servicios.Colecciones.Interfaces
         int darLongitud();
         Tipo[] darItems();
         #endregion
-
         #region Setters
         bool ponerItems(Tipo[] prmItems);
         #endregion
-
         #region Sorting
         bool reversar();
         #endregion
-
         #region Crud
         bool limpiar();
         #endregion
-
         #region QUERY
         int encontrar(Tipo prmItem);
         bool contiene(Tipo prmItem);

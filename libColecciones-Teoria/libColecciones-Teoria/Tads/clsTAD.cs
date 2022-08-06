@@ -6,7 +6,9 @@ namespace Servicios.Colecciones.Tads
     public class clsTAD<Tipo> : iTAD<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
-        private int atrLongitud;
+        private Tipo[] atrItems;
+        private int atrLongitud, atrCapacidad, atrFactorCrecimiento = 0;
+        private bool atrFlexible, atrReversar;
         #endregion
         #region Metodos
         #region Accesores
@@ -24,9 +26,7 @@ namespace Servicios.Colecciones.Tads
         }
         public bool ponerItems(Tipo[] prmItems)
         {
-            Tipo[] atrItems;
-            int atrCapacidad, atrFactorCrecimiento = 0;
-            bool atrTest = true, atrFlexible;
+            bool atrTest = true;
             atrItems = prmItems;
             if (prmItems.Length == int.MaxValue / 16)
             {
@@ -49,18 +49,40 @@ namespace Servicios.Colecciones.Tads
         #region QUERY
         public int encontrar(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            int atrIndice = -1;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        atrIndice = i;
+                        break;
+                    }
+                }
+            }
+            return atrIndice;
         }
         public bool contiene(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool contiene = false;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        contiene = true;
+                        break;
+                    }
+                }
+            }
+            return contiene;
         }
         #endregion
         #region Sorting
         public bool reversar()
         {
-            Tipo[] atrItems = null;
-            bool atrReversar = false;
             if (atrLongitud > 0)
             {
                 Tipo aux;
@@ -76,14 +98,12 @@ namespace Servicios.Colecciones.Tads
                 }
                 for (int i = atrLongitud - 1; i >= end; i--)
                 {
-
                     aux = atrItems[j];
                     atrItems[j] = atrItems[i];
                     atrItems[i] = aux;
                     j++;
                 }
                 atrReversar = true;
-
                 return atrReversar;
             }
             else
@@ -93,6 +113,10 @@ namespace Servicios.Colecciones.Tads
         }
         #endregion
         #region CRUDs
+        public bool limpiar()
+        {
+            throw new NotImplementedException();
+        }
         #region Patron Iterador
         #region Atributos
         protected int atrIndiceActual;//EN QUE LUGAR SE ENCUENTRA UBICADO EL ITERADOR 0 Y LONGITUD-1
@@ -177,10 +201,6 @@ namespace Servicios.Colecciones.Tads
         }
         #endregion
         #endregion
-        public bool limpiar()
-        {
-            throw new NotImplementedException();
-        }
         #endregion
         protected bool insertarEn(int indice, Tipo Item)
         {

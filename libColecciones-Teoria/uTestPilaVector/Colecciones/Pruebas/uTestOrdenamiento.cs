@@ -9,7 +9,7 @@ namespace uTestColecciones
         {
         #region Atributos de Prueba
         clsPilaVector<int> atrPilaDatos;
-        clsPilaVector<clsPersona> atrPilaObjetos;
+        //clsPilaVector<clsPersona> atrPilaObjetos;
         int[] atrVectorDeItemsEsperado;
         string atrMensajeResultado;
         #endregion

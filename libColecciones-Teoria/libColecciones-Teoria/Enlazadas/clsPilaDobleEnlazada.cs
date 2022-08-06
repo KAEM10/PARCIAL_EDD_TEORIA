@@ -16,24 +16,6 @@ namespace Servicios.Colecciones.Enlazadas
         private int atrLongitud;
         #endregion
         #region Metodos
-        #region Accesores
-        public Tipo[] darItems() //metodo para accceder al arreglo
-        {
-            return atrItems;
-        }
-        public int darLongitud() //metodo para acceder a la longitud
-        {
-            return atrLongitud;
-        }
-        public clsNodoDobleEnlazado<Tipo> darPrimero()
-        {
-            return atrPrimero;
-        }
-        public clsNodoDobleEnlazado<Tipo> darUltimo()
-        {
-            return atrUltimo;
-        }
-        #endregion
         #region Constructores
         public clsPilaDobleEnlazada()
         {
@@ -94,41 +76,6 @@ namespace Servicios.Colecciones.Enlazadas
                 prmItem = default(Tipo);
             }
             return reviso;
-        }
-        public bool reversar()
-        {
-            bool atrReversar = false;
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
-
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-                atrPrimero = null;
-                atrUltimo = null;
-                ponerItems(atrItems);
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
         }
         public bool actualizarAtrItems()
         {

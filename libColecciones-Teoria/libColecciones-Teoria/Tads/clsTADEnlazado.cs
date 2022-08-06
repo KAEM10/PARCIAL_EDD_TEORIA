@@ -13,11 +13,11 @@ namespace Servicios.Colecciones.Tads
         #region Metodos
         public clsNodoEnlazado<Tipo> darPrimero()
         {
-            throw new NotImplementedException();
+            return atrPrimero;
         }
         public clsNodoEnlazado<Tipo> darUltimo()
         {
-            throw new NotImplementedException();
+            return atrUltimo;
         }
         #endregion
     }

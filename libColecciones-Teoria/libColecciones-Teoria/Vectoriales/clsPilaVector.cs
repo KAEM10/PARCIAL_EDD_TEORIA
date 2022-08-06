@@ -9,15 +9,9 @@ namespace Servicios.Colecciones.Vectoriales
         #region Atributos
         private Tipo[] atrItems;
         private int atrCapacidad = 0, atrLongitud, atrFactorCrecimiento = 1000;
-        private bool atrFlexible = true, atrAjustarFC;
+        private bool atrFlexible = true;
         #endregion
         #region Metodos
-        #region Accesores
-        public bool ponerCapacidad(int prmValor)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
         #region Constructores
         public clsPilaVector()
         {
@@ -297,16 +291,6 @@ namespace Servicios.Colecciones.Vectoriales
         public bool OrdenarSeleccion(bool prmOrden)
         {
             return false;
-        }
-        #endregion
-        #region QUERY
-        public int encontrar(Tipo prmItem)
-        {
-            throw new NotImplementedException();
-        }
-        public bool contiene(Tipo prmItem)
-        {
-            throw new NotImplementedException();
         }
         #endregion
         #endregion

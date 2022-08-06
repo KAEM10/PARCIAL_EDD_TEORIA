@@ -6,16 +6,14 @@ namespace Servicios.Colecciones.Tads
     public class clsTADVectorial<Tipo>: clsTAD<Tipo>,iTADVectorial<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
-        private int atrCapacidad;
-        private int atrFactorCrecimiento;
-        private bool atrFlexible;
+        private int atrCapacidad, atrFactorCrecimiento;
+        private bool atrFlexible, atrFlexibilidad, atrAjustarFC;
         private Tipo[] atrItems;
         #endregion
         #region Metodos
         #region Accesores
         public bool ajustarFlexibilidad(bool prmFlexibilidad)
         {
-            bool atrFlexibilidad;
             if (prmFlexibilidad == false && atrCapacidad > 0)
             {
                 atrFlexibilidad = true;
@@ -50,7 +48,6 @@ namespace Servicios.Colecciones.Tads
         }
         public bool ponerFactorCrecimiento(int prmFactorCre)
         {
-            bool atrAjustarFC = false;
             if (prmFactorCre == int.MaxValue / 16 - atrItems.Length)
             {
                 atrFactorCrecimiento = prmFactorCre;
