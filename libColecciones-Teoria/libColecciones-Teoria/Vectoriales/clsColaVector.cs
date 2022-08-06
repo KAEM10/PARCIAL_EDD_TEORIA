@@ -1,9 +1,10 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
+using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Vectoriales
 {
-    public class clsColaVector<Tipo> : iCola<Tipo> where Tipo : IComparable<Tipo>
+    public class clsColaVector<Tipo> : clsTAD<Tipo>, iCola<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         private Tipo[] atrItems;
@@ -37,6 +38,18 @@ namespace Servicios.Colecciones.Vectoriales
         public int darFactorCrecimiento() // metodo para acceder a el factorcrecimiento
         {
             return atrFactorCrecimiento;
+        }
+        public bool ponerCapacidad(int prmValor)
+        {
+            throw new NotImplementedException();
+        }
+        public bool ponerFactorCrecimiento(int prmValor)
+        {
+            throw new NotImplementedException();
+        }
+        public bool ponerItems(Tipo prmVector)
+        {
+            throw new NotImplementedException();
         }
         #endregion
         #region Constructores
@@ -352,6 +365,23 @@ namespace Servicios.Colecciones.Vectoriales
             }
             return reviso;
         }
+        public bool limpiar()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region QUERY
+        public int encontrar(Tipo prmItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool contiene(Tipo prmItem)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+        #region Sorting
         public bool reversar()
         {
             if (atrLongitud > 0)

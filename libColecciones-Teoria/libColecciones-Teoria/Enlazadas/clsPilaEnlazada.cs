@@ -1,10 +1,11 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
 using Servicios.Colecciones.Nodos;
+using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Enlazadas
 {
-    public class clsPilaEnlazada<Tipo> : iPila<Tipo> where Tipo : IComparable<Tipo>
+    public class clsPilaEnlazada<Tipo> : clsTADEnlazado<Tipo>, iPila<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         #region Asociativo
@@ -203,6 +204,5 @@ namespace Servicios.Colecciones.Enlazadas
 
         #endregion
         #endregion
-
     }
 }

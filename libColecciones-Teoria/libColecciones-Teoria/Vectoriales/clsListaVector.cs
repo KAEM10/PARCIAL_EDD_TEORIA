@@ -1,9 +1,10 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
+using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Vectoriales
 {
-    public class clsListaVector<Tipo> : iLista<Tipo> where Tipo : IComparable<Tipo>
+    public class clsListaVector<Tipo> : clsTAD<Tipo>, iLista<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         private Tipo[] atrItems;
@@ -37,6 +38,18 @@ namespace Servicios.Colecciones.Vectoriales
         public int darFactorCrecimiento() // metodo para acceder a el factorcrecimiento
         {
             return atrFactorCrecimiento;
+        }
+        public bool ponerCapacidad(int prmValor)
+        {
+            throw new NotImplementedException();
+        }
+        public bool ponerFactorCrecimiento(int prmValor)
+        {
+            throw new NotImplementedException();
+        }
+        public bool ponerItems(Tipo prmVector)
+        {
+            throw new NotImplementedException();
         }
         #endregion
         #region Constructores
@@ -395,37 +408,9 @@ namespace Servicios.Colecciones.Vectoriales
 
             return recupero;
         }
-        public bool reversar()
+        public bool limpiar()
         {
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
-
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
+            throw new NotImplementedException();
         }
         #endregion
         #region QUERY
@@ -463,6 +448,40 @@ namespace Servicios.Colecciones.Vectoriales
             }
 
             return contiene;
+        }
+        #endregion
+        #region Sorting
+        public bool reversar()
+        {
+            if (atrLongitud > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for (int i = atrLongitud - 1; i >= end; i--)
+                {
+
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                atrReversar = true;
+
+                return atrReversar;
+            }
+            else
+            {
+                return atrReversar;
+            }
         }
         #endregion
         #endregion

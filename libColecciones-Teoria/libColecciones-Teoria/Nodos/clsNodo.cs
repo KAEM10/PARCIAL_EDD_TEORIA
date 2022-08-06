@@ -1,21 +1,22 @@
 ﻿using System;
-
+using Servicios.Colecciones.Interfaces;
 namespace Servicios.Colecciones.Nodos
 {
-    public class clsNodo<Tipo> where Tipo : IComparable<Tipo>
+    public class clsNodo<Tipo> :iNodo<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         #region Propios
         protected Tipo atrItem;
-        #endregion 
+        #endregion
         #endregion
         public Tipo darItem()
         {
             return atrItem;
         }
-        public void ponerItem(Tipo prmItem)
+        public bool ponerItem(Tipo Item)
         {
-            atrItem = prmItem; 
+            atrItem = Item;
+            return false;
         }
     }
 }

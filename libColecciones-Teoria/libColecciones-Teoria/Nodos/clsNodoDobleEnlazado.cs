@@ -1,8 +1,9 @@
 ﻿using System;
+using Servicios.Colecciones.Interfaces;
 
 namespace Servicios.Colecciones.Nodos
 {
-    public class clsNodoDobleEnlazado<Tipo>:clsNodo<Tipo> where Tipo:IComparable<Tipo>
+    public class clsNodoDobleEnlazado<Tipo>:clsNodo<Tipo>,iNodoDobleEnlazado<Tipo> where Tipo:IComparable<Tipo>
     {
         #region Atributos
         #region Asociativo
@@ -31,6 +32,26 @@ namespace Servicios.Colecciones.Nodos
         public void enlazarAnterior(clsNodoDobleEnlazado<Tipo> nodoAnterior)
         {
             atrAnterior = nodoAnterior;
+        }
+
+        public clsNodoDobleEnlazado<Tipo> darSiguiente()
+        {
+            throw new NotImplementedException();
+        }
+
+        public clsNodoDobleEnlazado<Tipo> darAnterior()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ponerSiguiente()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ponerAnterior()
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }

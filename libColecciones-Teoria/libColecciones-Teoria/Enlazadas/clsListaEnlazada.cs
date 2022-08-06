@@ -1,10 +1,11 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
 using Servicios.Colecciones.Nodos;
+using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Enlazadas
 {
-    public class clsListaEnlazada<Tipo> : iLista<Tipo> where Tipo : IComparable<Tipo>
+    public class clsListaEnlazada<Tipo> : clsTADEnlazado<Tipo>, iLista<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         #region Asociativo

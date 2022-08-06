@@ -1,10 +1,11 @@
 ﻿using System;
 using Servicios.Colecciones.Interfaces;
 using Servicios.Colecciones.Nodos;
+using Servicios.Colecciones.Tads;
 
 namespace Servicios.Colecciones.Enlazadas
 {
-    public class clsColaEnlazada<Tipo> : iCola<Tipo> where Tipo : IComparable<Tipo>
+    public class clsColaEnlazada<Tipo> : clsTADEnlazado<Tipo>, iCola<Tipo> where Tipo : IComparable<Tipo>
     {
         #region Atributos
         #region Asociativo
