@@ -7,33 +7,7 @@ namespace Servicios.Colecciones.Enlazadas
 {
     public class clsListaDobleEnlazada<Tipo> : clsTADDobleEnlazado<Tipo>, iLista<Tipo> where Tipo : IComparable<Tipo>
     {
-        #region Atributos
-        private Tipo[] atrItems;
-        private bool atrReversar;
-        #endregion
         #region Metodos
-        #region Accesores
-        public override int darLongitud()
-        {
-            return atrLongitud;
-        }
-        public override bool estaVacia()
-        {
-            throw new NotImplementedException();
-        }
-        public override Tipo[] darItems()
-        {
-            return atrItems;
-        }
-        public override clsNodoDobleEnlazado<Tipo> darPrimero()
-        {
-            return atrPrimero;
-        }
-        public override clsNodoDobleEnlazado<Tipo> darUltimo()
-        {
-            return atrUltimo;
-        }
-        #endregion
         #region Constructores
         public clsListaDobleEnlazada()
         {
@@ -43,295 +17,26 @@ namespace Servicios.Colecciones.Enlazadas
             atrUltimo = null;
         }
         #endregion
-        #region Mutadores
-        public override bool ponerItems(Tipo[] prmItems)
-        {
-            bool atrTest = true;
-
-            atrItems = prmItems;
-            if (prmItems.Length == 0)
-            {
-                atrTest = false;
-            }
-            else if (prmItems.Length == int.MaxValue / 16)
-            {
-                atrLongitud = atrItems.Length;
-                return atrTest;
-            }
-            else if (prmItems.Length == int.MaxValue / 16 + 1)
-            {
-                atrLongitud = 0;
-                atrTest = false;
-                atrItems = new Tipo[0];
-                atrItems = default(Tipo[]);
-            }
-            else
-            {
-                for (int i = atrItems.Length - 1; i >= 0; i--)
-                {
-                    if (atrItems[i] != null)
-                    {
-                        clsNodoDobleEnlazado<Tipo> nodoNuevo = new clsNodoDobleEnlazado<Tipo>(atrItems[i]);
-
-                        if (atrPrimero == null)
-                        {
-                            atrPrimero = nodoNuevo;
-                            atrUltimo = nodoNuevo;
-                        }
-                        else
-                        {
-                            nodoNuevo.enlazarSiguiente(atrPrimero);
-                            atrPrimero.enlazarAnterior(nodoNuevo);
-                            atrPrimero = nodoNuevo;
-                        }
-                    }
-                }
-                atrLongitud = atrItems.Length;
-            }
-            return atrTest;
-        }
-        #endregion
-        #region CRUD
+        #region CRUDs
         public bool agregar(Tipo prmItem)
         {
-            bool agrego = false;
-            clsNodoDobleEnlazado<Tipo> nodoNuevo = new clsNodoDobleEnlazado<Tipo>(prmItem);
-            if (atrPrimero == null)
-            {
-                atrPrimero = nodoNuevo;
-                atrUltimo = nodoNuevo;
-            }
-            else
-            {
-                atrUltimo.enlazarSiguiente(nodoNuevo);
-                nodoNuevo.enlazarAnterior(atrUltimo);
-                atrUltimo = nodoNuevo;
-
-            }
-            atrLongitud++;
-            agrego = actualizarAtrItems();
-            return agrego;
+            return insertarEn(atrLongitud, prmItem);
         }
         public bool insertar(int prmIndice, Tipo prmItem)
         {
-            bool inserto = false;
-            clsNodoDobleEnlazado<Tipo> nodoNuevo = new clsNodoDobleEnlazado<Tipo>(prmItem);
-            clsNodoDobleEnlazado<Tipo> nodoAuxiliar;
-
-            if (prmIndice >= 0 && prmIndice <= atrLongitud)
-            {
-                if (prmIndice == 0)
-                {
-                    if (atrLongitud == 0)
-                    {
-                        atrPrimero = nodoNuevo;
-                        atrUltimo = nodoNuevo;
-                    }
-                    else
-                    {
-                        atrPrimero.enlazarAnterior(nodoNuevo);
-                        nodoNuevo.enlazarSiguiente(atrPrimero);
-                        atrPrimero = nodoNuevo;
-                    }
-                }
-                else if (prmIndice == atrLongitud)
-                {
-                    nodoNuevo.enlazarAnterior(atrUltimo);
-                    atrUltimo.enlazarSiguiente(nodoNuevo);
-                    atrUltimo = nodoNuevo;
-                }
-                else
-                {
-                    clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-
-                    for (int i = 0; i < prmIndice - 1; i++)
-                    {
-                        nodoTemporal = nodoTemporal.pasarItems();
-                    }
-
-                    nodoAuxiliar = nodoTemporal.pasarItems();
-                    nodoTemporal.enlazarSiguiente(nodoNuevo);
-                    nodoAuxiliar.enlazarAnterior(nodoNuevo);
-                    nodoNuevo.enlazarSiguiente(nodoAuxiliar);
-                    nodoNuevo.enlazarAnterior(nodoTemporal);
-
-                    
-                }
-                atrLongitud++;
-                inserto = actualizarAtrItems();
-            }
-            return inserto;
+            return insertarEn(prmIndice, prmItem);
         }
         public bool extraer(int prmIndice, ref Tipo prmItem)
         {
-            bool extraer = false;
-            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
-            {
-                if ((atrLongitud > 0))
-                {
-                    if (prmIndice == 0)
-                    {
-                        prmItem = atrPrimero.darItem();
-                        atrPrimero = atrPrimero.pasarItems();
-                        atrPrimero.enlazarAnterior(null);
-                    }
-                    else
-                    {
-                        for (int i = 0; i < prmIndice - 1; i++)
-                        {
-                            nodoTemporal = nodoTemporal.pasarItems();
-                            prmItem = nodoTemporal.pasarItems().darItem();
-                        }
-
-                        if (nodoTemporal.pasarItems().pasarItems() == null)
-                        {
-                            nodoTemporal.enlazarSiguiente(null);
-                            nodoTemporal.enlazarAnterior(atrUltimo);
-                            atrUltimo = nodoTemporal;
-                        }
-                        else
-                        {
-                            nodoTemporal.pasarItems().pasarItems().enlazarAnterior(nodoTemporal);
-                            nodoTemporal.enlazarSiguiente(nodoTemporal.pasarItems().pasarItems());
-                        }
-                    }
-                    atrLongitud--;
-                    extraer = actualizarAtrItems();
-                }
-            }
-            return extraer;
+            return extraerEn(prmIndice, ref prmItem);
         }
         public bool modificar(int prmIndice, Tipo prmItem)
         {
-            bool modifico = false;
-            if (atrLongitud > 0 && prmIndice < atrLongitud && prmIndice >= 0)
-            {
-                clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-
-                for (int i = 0; i < prmIndice; i++)
-                {
-                    nodoTemporal = nodoTemporal.pasarItems();
-                }
-                nodoTemporal.ponerItem(prmItem);
-                modifico = actualizarAtrItems();
-            }
-            return modifico;
+            return modificarEn(prmIndice, prmItem);
         }
         public bool recuperar(int prmIndice, ref Tipo prmItem)
         {
-            bool recupero = false;
-            if (atrLongitud > 0 && prmIndice < atrLongitud && prmIndice >= 0)
-            {
-                clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-                prmItem = nodoTemporal.darItem();
-                for (int i = 0; i < prmIndice; i++)
-                {
-                    nodoTemporal = nodoTemporal.pasarItems();
-                    prmItem = nodoTemporal.darItem();
-                }
-                recupero = actualizarAtrItems();
-            }
-            return recupero;
-        }
-        public bool actualizarAtrItems()
-        {
-            bool actualizar = false;
-            if (atrLongitud > int.MaxValue / 16)
-            {
-                atrLongitud--;
-                return actualizar;
-            }
-            atrItems = new Tipo[atrLongitud];
-            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-            for (int i = 0; i < atrLongitud; i++)
-            {
-                atrItems[i] = nodoTemporal.darItem();
-                if (nodoTemporal.pasarItems() != null)
-                {
-                    nodoTemporal = nodoTemporal.pasarItems();
-                }
-            }
-            actualizar = true;
-            return actualizar;
-        }
-        #endregion
-        #region QUERY
-        public override int encontrar(Tipo prmItem)
-        {
-            int atrIndice = -1;
-            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-            if (atrLongitud > 0)
-            {
-                for (int i = 0; i < atrLongitud; i++)
-                {
-                    if (nodoTemporal.darItem().Equals(prmItem))
-                    {
-                        atrIndice = i;
-                        break;
-                    }
-                    else
-                    {
-                        nodoTemporal = nodoTemporal.pasarItems();
-                    }
-                }
-            }
-
-            return atrIndice;
-        }
-        public override bool contiene(Tipo prmItem)
-        {
-            bool contiene = false;
-            clsNodoDobleEnlazado<Tipo> nodoTemporal = atrPrimero;
-            if (atrLongitud > 0)
-            {
-                for (int i = 0; i < atrLongitud; i++)
-                {
-                    if (nodoTemporal.darItem().Equals(prmItem))
-                    {
-                        contiene = true;
-                        break;
-                    }
-                    else
-                    {
-                        nodoTemporal = nodoTemporal.pasarItems();
-                    }
-                }
-            }
-
-            return contiene;
-        }
-        #endregion
-        #region Sorting
-        public override bool reversar()
-        {
-            if (atrLongitud > 0)
-            {
-                Tipo aux;
-                int j = 0;
-                int end;
-                if (atrLongitud % 2 == 0)
-                {
-                    end = (atrLongitud) / 2;
-                }
-                else
-                {
-                    end = (atrLongitud - 1) / 2;
-                }
-                for (int i = atrLongitud - 1; i >= end; i--)
-                {
-                    aux = atrItems[j];
-                    atrItems[j] = atrItems[i];
-                    atrItems[i] = aux;
-                    j++;
-                }
-                atrReversar = true;
-                return atrReversar;
-            }
-            else
-            {
-                return atrReversar;
-            }
+            return revisarEn(prmIndice, ref prmItem);
         }
         #endregion
         #endregion

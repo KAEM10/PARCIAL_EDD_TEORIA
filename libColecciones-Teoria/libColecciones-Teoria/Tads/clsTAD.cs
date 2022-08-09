@@ -7,40 +7,115 @@ namespace Servicios.Colecciones.Tads
     {
         #region Atributos
         protected int atrLongitud;
+        
+        protected Tipo[] atrItems;
         #endregion
         #region Metodos
         #region Accesores
         public virtual int darLongitud()
         {
-            throw new NotImplementedException();
+            return atrLongitud;
         }
         public virtual bool estaVacia()
         {
-            throw new NotImplementedException();
+            bool vacio = atrLongitud == 0 ? true : false;
+            return vacio;
         }
         public virtual Tipo[] darItems()
         {
-            throw new NotImplementedException();
+            return atrItems;
         }
         public virtual bool ponerItems(Tipo[] prmItems)
         {
-            throw new NotImplementedException();
+            bool atrTest = true;
+
+            atrItems = prmItems;
+            if (prmItems.Length == 0)
+            {
+                atrTest = false;
+            }
+            else if (prmItems.Length == int.MaxValue / 16)
+            {
+                atrLongitud = atrItems.Length;
+                return atrTest;
+            }
+            else if (prmItems.Length == int.MaxValue / 16 + 1)
+            {
+                atrLongitud = 0;
+                atrTest = false;
+                atrItems = new Tipo[0];
+                atrItems = default(Tipo[]);
+            }
+            atrLongitud = atrItems.Length;
+            
+            return atrTest;
         }
         #endregion
         #region QUERY
         public virtual int encontrar(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            int atrIndice = -1;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        atrIndice = i;
+                        break;
+                    }
+                }
+            }
+            return atrIndice;
         }
         public virtual bool contiene(Tipo prmItem)
         {
-            throw new NotImplementedException();
+            bool contiene = false;
+            if (atrLongitud > 0)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    if (atrItems[i].Equals(prmItem))
+                    {
+                        contiene = true;
+                        break;
+                    }
+                }
+            }
+            return contiene;
         }
         #endregion
         #region Sorting
         public virtual bool reversar()
         {
-            throw new NotImplementedException();
+            bool reversar = false;
+            if (atrLongitud > 0)
+            {
+                Tipo aux;
+                int j = 0;
+                int end;
+                if (atrLongitud % 2 == 0)
+                {
+                    end = (atrLongitud) / 2;
+                }
+                else
+                {
+                    end = (atrLongitud - 1) / 2;
+                }
+                for (int i = atrLongitud - 1; i >= end; i--)
+                {
+                    aux = atrItems[j];
+                    atrItems[j] = atrItems[i];
+                    atrItems[i] = aux;
+                    j++;
+                }
+                reversar = true;
+                return reversar;
+            }
+            else
+            {
+                return reversar;
+            }
         }
         #endregion
         #region CRUDs
@@ -48,6 +123,60 @@ namespace Servicios.Colecciones.Tads
         {
             throw new NotImplementedException();
         }
+        public virtual bool insertarEn(int prmIndice, Tipo prmItem)
+        {
+            bool inserto = false;//Sobre escrito en las 3 categorias
+            return inserto;
+        }
+        public virtual bool extraerEn(int prmIndice, ref Tipo prmItem)
+        {
+            bool extraer = false;
+
+            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
+            {
+                if ((atrLongitud > 0) && (atrItems[prmIndice] != null))
+                {
+                    prmItem = atrItems[prmIndice];
+                    for (int i = prmIndice; i < (atrLongitud - 1); i++)
+                    {
+                        atrItems[i] = atrItems[i + 1];
+                    }
+                    extraer = true;
+                    atrLongitud--;
+                }
+
+            }
+
+            return extraer;
+        }
+        public virtual bool modificarEn(int prmIndice, Tipo prmItem)
+        {
+            bool modifico = false;
+            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
+            {
+                atrItems[prmIndice] = prmItem;
+                modifico = true;
+            }
+
+            return modifico;
+        }
+        public virtual bool revisarEn(int prmIndice, ref Tipo prmItem)
+        {
+            bool recupero = false;
+            if ((prmIndice >= 0) && (prmIndice < atrLongitud))
+            {
+                prmItem = atrItems[prmIndice];
+                recupero = true;
+            }
+            else
+            {
+                prmItem = default(Tipo);
+            }
+
+
+            return recupero;
+        }
+
         #region Patron Iterador
         #region Atributos
         protected int atrIndiceActual;//EN QUE LUGAR SE ENCUENTRA UBICADO EL ITERADOR 0 Y LONGITUD-1
@@ -133,23 +262,8 @@ namespace Servicios.Colecciones.Tads
         #endregion
         #endregion
         #endregion
-        protected bool insertarEn(int indice, Tipo Item)
-        {
-            throw new NotImplementedException();
-        }
-        protected bool extraerEn(int indice, Tipo Item)
-        {
-            throw new NotImplementedException();
-        }
-        protected bool modificarEn(int indice, Tipo Item)
-        {
-            throw new NotImplementedException();
-        }
-        protected bool revisarEn(int indice, Tipo Item)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
+        
     }
+    #endregion
     #endregion
 }

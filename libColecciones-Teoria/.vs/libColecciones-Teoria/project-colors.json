@@ -15,7 +15,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Archivos varios",
       "ColorIndex": -1
+    },
+    "4ff2f5dd-346c-496e-acbf-b8cdc3863a61": {
+      "ProjectGuid": "4ff2f5dd-346c-496e-acbf-b8cdc3863a61",
+      "DisplayName": "Rodallega - Eraso - Arroyo",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
