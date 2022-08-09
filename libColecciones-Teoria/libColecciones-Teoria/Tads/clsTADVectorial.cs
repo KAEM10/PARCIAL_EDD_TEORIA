@@ -356,17 +356,155 @@ namespace Servicios.Colecciones.Tads
             }
             return ordenado;
         }
-        public bool OrdenarInsercion(bool prmOrden)
+        public void OrdenarInsercion(bool prmOrden)
         {
-            throw new NotImplementedException();
+            Tipo temporal;
+            int j;
+            if (prmOrden == false)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    temporal = atrItems[i];
+                    j = i - 1;
+                    while (j >= 0 && Int32.Parse(atrItems[j].ToString()) > Int32.Parse(temporal.ToString()))
+                    {
+                        atrItems[j + 1] = atrItems[j];
+                        j--;
+                    }
+                    atrItems[j + 1] = temporal;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    temporal = atrItems[i];
+                    j = i - 1;
+                    while (j >= 0 && Int32.Parse(atrItems[j].ToString()) < Int32.Parse(temporal.ToString()))
+                    {
+                        atrItems[j + 1] = atrItems[j];
+                        j--;
+                    }
+                    atrItems[j + 1] = temporal;
+                }
+            }
         }
-        public bool OrdenarQuickSort(bool prmOrden)
+        public void OrdenarQuickSort(bool prmOrden)
         {
-            throw new NotImplementedException();
+            if (prmOrden == false)
+            {
+                QuickSortAscendente(atrItems, 0, atrLongitud - 1);
+            }
+            else
+            {
+                QuickSortDescendente(atrItems, 0, atrLongitud - 1);
+            }
         }
-        public bool OrdenarSeleccion(bool prmOrden)
+        public void QuickSortAscendente(Tipo[] prmArray, int prmIni, int prmFin)
         {
-            throw new NotImplementedException();
+            int i, j, central;
+            Tipo pivote;
+            central = (prmIni + prmFin) / 2;
+            pivote = prmArray[central];
+            i = prmIni;
+            j = prmFin;
+            do
+            {
+                while (prmArray[i].CompareTo(pivote) < 0) i++;
+                while (prmArray[j].CompareTo(pivote) > 0) j--;
+                if (i <= j)
+                {
+                    Tipo temp;
+                    temp = prmArray[i];
+                    prmArray[i] = prmArray[j];
+                    prmArray[j] = temp;
+                    i++;
+                    j--;
+                }
+            } while (i <= j);
+
+            if (prmIni < j)
+            {
+                QuickSortAscendente(prmArray, prmIni, j);
+            }
+            if (i < prmFin)
+            {
+                QuickSortAscendente(prmArray, i, prmFin);
+            }
+        }
+        public void QuickSortDescendente(Tipo[] prmArray, int prmIni, int prmFin)
+        {
+            int i, j, central;
+            Tipo pivote;
+            central = (prmIni + prmFin) / 2;
+            pivote = prmArray[central];
+            i = prmIni;
+            j = prmFin;
+            do
+            {
+                while (prmArray[i].CompareTo(pivote) > 0) i++;
+                while (prmArray[j].CompareTo(pivote) < 0) j--;
+
+                if (i <= j)
+                {
+                    Tipo temp;
+                    temp = prmArray[i];
+                    prmArray[i] = prmArray[j];
+                    prmArray[j] = temp;
+                    i++;
+                    j--;
+                }
+            } while (i <= j);
+
+            if (prmIni < j)
+            {
+                QuickSortDescendente(prmArray, prmIni, j);
+            }
+            if (i < prmFin)
+            {
+                QuickSortDescendente(prmArray, i, prmFin);
+            }
+        }
+        public void OrdenarSeleccion(bool prmOrden)
+        {
+            int menor;
+            Tipo temporal;
+            if (prmOrden == false)
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    menor = i;
+
+                    for (int j = i + 1; j < atrLongitud; j++)
+                    {
+                        if (Int32.Parse(atrItems[j].ToString()) < Int32.Parse(atrItems[menor].ToString()))
+                        {
+                            menor = j;
+                        }
+                    }
+                    temporal = atrItems[i];
+                    atrItems[i] = atrItems[menor];
+                    atrItems[menor] = temporal;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < atrLongitud; i++)
+                {
+                    menor = i;
+
+                    for (int j = i + 1; j < atrLongitud; j++)
+                    {
+                        if (Int32.Parse(atrItems[j].ToString()) > Int32.Parse(atrItems[menor].ToString()))
+                        {
+                            menor = j;
+                        }
+                    }
+                    temporal = atrItems[i];
+                    atrItems[i] = atrItems[menor];
+                    atrItems[menor] = temporal;
+                }
+            }
         }
         #endregion
         #endregion

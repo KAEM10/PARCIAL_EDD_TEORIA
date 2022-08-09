@@ -9,3 +9,4 @@ D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Deb
 D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.dll
 D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\libColecciones.pdb
 D:\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\Rodallega - Eraso - Arroyo.csproj.AssemblyReference.cache
+C:\Users\maye\Documents\GitHub\PARCIAL_EDD_TEORIA\libColecciones-Teoria\libColecciones-Teoria\obj\Debug\Rodallega - Eraso - Arroyo.csprojAssemblyReference.cache
